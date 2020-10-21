@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TownPress - WordPress Theme Documentation</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic" rel="stylesheet" type="text/css">
+        <style type="text/css">
+        	body { margin: 0; padding: 50px; font-family: 'Open Sans', verdana, arial, sans-serif; font-size: 16px; color: #444; overflow-x: hidden; }
+    		a { color: #1565c0; }
+    		a:hover { text-decoration: none; }
+    		h2 { margin: 0 0 60px 0; font-size: 3em; text-transform: uppercase; letter-spacing: 0.25em; color: #CCC; }
+    		h3 { margin: 0 0 30px 0; font-size: 1.5em; color: #74aa7b; }
+    		h4 { margin: 0 0 30px 0; font-size: 1.125em; color: #333; }
+    		img { max-width: 100%; }
+    		p { margin: 30px 0; line-height: 1.6em; }
+    		hr { margin: 60px 0; border: 0; border-top: 1px solid #DDD; }
+    		pre { padding: 20px; line-height: 22px; font-size: 15px; background-color: #eee; overflow: auto; }
+    		#wrapper { padding: 0 300px; }
+    		#header { margin-bottom: 60px; }
+    		.page-title { position: absolute; top: -150px; left: 0; right: 0; line-height: 0; font-size: 30em; font-weight: bold; text-align: right; color: #F7F7F7; z-index: 10; }
+    		.header-info { margin: 0 auto 30px auto; padding: 5px 30px; max-width: 900px; background-color: #EEE; }
+    		.main-menu { position: fixed; top: 0; left: 0; bottom: 0; width: 300px; background-color: rgba( 255, 255, 255, 0.5 ); border: 1px solid #DDD; overflow-y: auto; z-index: 20; }
+    		.main-menu ul { margin: 0; padding: 0; list-style-type: none; }
+    		.main-menu > ul { padding: 30px; }
+    		.main-menu ul > li { margin-top: 10px; }
+    		.main-menu ul > li:first-child { margin-top: 0; }
+    		.main-menu ul ul { margin: 10px 0 0 30px; font-size: .875em; }
+    		.main-menu > ul > li > a { font-weight: bold; color: #74aa7b; }
+    		.main-menu a { text-decoration: none; }
+    		.main-menu a:hover { text-decoration: underline; }
+    		#core { position: relative; margin: 0 auto; max-width: 900px; z-index: 20; }
+    		.c-alert-message { position: relative; margin: 0 0 30px 0; padding: 14px 30px; font-size: .938em; border: 0; border-radius: 3px; overflow: hidden; z-index: 1;
+    			color: #5987bb; background-color: #dce8f6; }
+    		.c-alert-message p { margin: 15px 0 0 0; }
+			.c-alert-message p:first-child { margin: 0; }
+			#core ul, #core ol { margin: 30px 0; }
+			#core ul > li, #core ol > li { margin: 15px 0 0 0; }
+			#core ul > li:first-child, #core ol > li:first-child { margin: 0; }
+			#core ol.caption { margin: -25px 0 30px 0; color: #aaa; font-size: .75em; }
+			#core ol.caption > li { margin: 4px 0; }
+			#core dl { margin: 30px 0; padding: 0; font-size: 0.875em; }
+			#core dl > dt { margin: 15px 0 5px; padding: 0; font-weight: bold; font-style: italic; }
+			#core dl > dd { margin: 0; padding: 0; }
+			@media ( max-width: 1600px ) {
+				#wrapper { padding: 0 0 0 300px; }
+			}
+			@media ( max-width: 1200px ) {
+				h2 { font-size: 2em; }
+			}
+			@media ( max-width: 1000px ) {
+				#wrapper { padding: 0; }
+				.main-menu { position: relative; width: auto; }
+			}
+			@media ( max-width: 700px ) {
+				body { padding: 20px; }
+				h2 { font-size: 1.875em; letter-spacing: 0; }
+			}
+        </style>
+    </head>
+    <body>
+
+	<!-- WRAPPER : begin -->
+	<div id="wrapper">
+
+		<!-- HEADER : begin -->
+		<header id="header">
+
+			<h1 class="page-title">TownPress</h1>
+
+			<!-- MAIN MENU : begin -->
+			<nav class="main-menu">
+				<ul>
+					<li><a href="#introduction">Introduction</a></li>
+
+					<li><a href="#quick-overview">Quick Overview</a></li>
+
+					<li>
+						<a href="#installation-and-setup">Installation &amp; Setup</a>
+						<ul>
+							<li>
+								<a href="#theme-installation">Theme Installation</a>
+								<ul>
+									<li><a href="#theme-installation-parent">Parent Theme Installation</a></li>
+									<li><a href="#theme-installation-child">Child Theme Installation</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#plugins-installation">Plugins Installation</a>
+								<ul>
+									<li><a href="#plugins-installation-bundled">Bundled Plugins</a></li>
+									<li><a href="#plugins-installation-3rd-party">3rd Party Plugins</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#demo-import">Demo Setup</a>
+								<ul>
+									<li><a href="#demo-import-quick">Quick Demo Import</a></li>
+									<li><a href="#demo-import-manual">Manual Demo Import</a></li>
+									<li><a href="#demo-import-after">After Demo Import</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#post-installation-setup">Post-Installation Setup</a>
+								<ul>
+									<li><a href="#post-installation-setup-general">General Settings</a></li>
+									<li><a href="#post-installation-setup-permalinks">Permalinks Settings</a></li>
+									<li><a href="#post-installation-setup-front-page">Front Page / Blog Page</a></li>
+									<li><a href="#post-installation-setup-menus">Managing Menus</a></li>
+									<li><a href="#post-installation-setup-media">Media Settings</a></li>
+									<li><a href="#post-installation-setup-map-settings">Map Settings</a></li>
+									<li><a href="#post-installation-setup-typography">Typography</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="#content-editing">Content Editing</a>
+						<ul>
+							<li><a href="#posts-and-pages">Standard Posts and Pages</a></li>
+							<li><a href="#cpt-listing">Directory Listing</a></li>
+							<li><a href="#cpt-event">Event</a></li>
+							<li><a href="#cpt-gallery">Gallery</a></li>
+							<li><a href="#cpt-document">Document</a></li>
+							<li><a href="#cpt-person">Person</a></li>
+							<li><a href="#cpt-notice">Notice</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="#customization">Customization</a>
+						<ul>
+							<li><a href="#front-page">Front Page</a></li>
+							<li><a href="#menus">Menus</a></li>
+							<li><a href="#sidebars-widgets">Sidebars &amp; Widgets</a></li>
+							<li><a href="#colors">Colors</a></li>
+							<li><a href="#translation">Translation</a></li>
+							<li><a href="#icons">Icons</a></li>
+							<li><a href="#code-customization">Code Customization</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="#how-to">How To</a>
+						<ul>
+							<li><a href="#how-to-display-old-events">Display Old Events</a></li>
+							<li><a href="#how-to-update-theme">Update the Theme</a></li>
+							<li><a href="#how-to-update-plugins">Update Bundled Plugins</a></li>
+							<li><a href="#how-to-add-excerpt">Add Post Excerpt</a></li>
+							<li><a href="#how-to-setup-contact-form">Setup Contact Form</a></li>
+							<li><a href="#how-to-setup-forum">Setup Forum</a></li>
+							<li><a href="#how-to-reorder-posts-and-categories">Reorder Posts and Categories</a></li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="#elements">Elements</a>
+						<ul>
+							<li><a href="#shortcode-lsvr_townpress_posts">Posts</a></li>
+							<li><a href="#shortcode-lsvr_townpress_post_slider">Post Slider</a></li>
+							<li><a href="#shortcode-lsvr_townpress_sidebar">Sidebar</a></li>
+							<li><a href="#shortcode-lsvr_townpress_sitemap">Sitemap</a></li>
+							<li><a href="#shortcode-lsvr_icon">Icon</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#townpressv1">Old Version</a></li>
+				</ul>
+			</nav>
+			<!-- MAIN MENU : end -->
+
+		</header>
+		<!-- HEADER : end -->
+
+		<!-- CORE : begin -->
+		<div id="core">
+			<div class="core-inner">
+
+				<!-- INTRODUCTION : begin -->
+				<section id="introduction">
+
+					<h2>Introduction</h2>
+					<p><strong>Thank you for purchasing the TownPress theme!</strong></p>
+
+					<p>The goal of this theme is to provide a powerful set of tools for small to medium municipality websites right out of the box. Being a WordPress theme, it can benefit from the whole ecosystem of this wonderful platform. There are <a href="https://wordpress.org/plugins/" target="_blank">thousands of free plugins</a> which can extend your site's features and <a href="https://wordpress.org/support/" target="_blank">plenty of helpful resources</a> where you can find answers to your WordPress related questions.</p>
+					<p>We hope you will find this documentation helpful and will enjoy working with TownPress theme as much as we enjoyed developing it.</p>
+					<p><a href="https://themeforest.net/user/lsvrthemes">LSVRthemes</a></p>
+
+					<div class="c-alert-message">
+						<p>Please note that this documentation doesn’t cover WordPress basics too extensively, so if you are new to WordPress, we highly recommend that you read through
+						some <a href="http://codex.wordpress.org/Getting_Started_with_WordPress" target="_blank">beginner tutorials</a> first.</p>
+					</div>
+
+				</section>
+				<!-- INTRODUCTION : end -->
+
+				<hr>
+
+				<!-- QUICK OVERVIEW : begin -->
+				<section id="quick-overview">
+
+					<h2>Quick Overview</h2>
+
+					<p><a href="content/quick-overview.jpg" target="_blank"><img src="content/quick-overview.jpg" alt=""></a></p>
+					<ol>
+						<li><strong>Header</strong> settings (such as background image) can be managed under <em>Appearance / Customize / Header</em>.</li>
+						<li>Upload your <strong>Logo</strong> under <em>Appearance / Customize / Site Identity</em>. Then head to <em>Appearance / Customize / Header</em> to limit its max width via <em>Logo Max Width</em> option.</li>
+						<li><strong>Language Switcher</strong> can be enabled under <em>Appearance / Customize / Languages</em>.</li>
+						<li><strong>Header Map</strong> can be enabled under <em>Appearance / Customize / Header</em> via <em>Header Map</em> option, but first you have to <strong>choose a map provider</strong> under <em>Appearance / Customize / Map Settings</em>.</li>
+						<li><strong>Header Search</strong> can be enabled under <em>Appearance / Customize / Header</em> via <em>Enable Header Search</em> option.</li>
+						<li>Default <strong>Left Sidebar</strong> can be populated with widgets under <em>Appearance / Widgets</em>. You can create your custom sidebars under <em>Appearance / Customize / Custom Sidebars</em>, then assign them to any standard page via its <em>Sidebar Settings</em>, or assign them to a post type archive or detail page under <em>Appearance / Customize</em>. <a href="#sidebars-widgets">Learn more about sidebars</a>.</li>
+						<li>The <strong>content section</strong> contains the title and the content of the current post/page. You can change its layout for standard pages by changing the <em>Template</em> option under <em>Page Attributes</em>.</li>
+						<li>Default <strong>Right Sidebar</strong> can be populated with widgets under <em>Appearance / Widgets</em>. You can create your custom sidebars under <em>Appearance / Customize / Custom Sidebars</em>, then assign them to any standard page via its <em>Sidebar Settings</em>, or assign them to a post type archive or detail page under <em>Appearance / Customize</em>. <a href="#sidebars-widgets">Learn more about sidebars</a>.</li>
+						<li><strong>Title of the curent page</strong> can contain some simple HTML code, for example <a href="https://www.w3schools.com/tags/tag_br.asp" target="_blank">&lt;br&gt;</a> or <a href="https://www.w3schools.com/tags/tag_em.asp" target="_blank">&lt;em&gt;</a> tags. You can disable the title for standard pages by setting their Template (under Page Attributes) to Boxed w/o Title or Not Boxed w/o Title.</li>
+						<li>The <strong>TownPress Sitemap</strong> section can be added either via <a href="#front-page">block editor</a> or via the <a href="#shortcode-lsvr_townpress_sitemap">lsvr_townpress_sitemap</a> shortcode. You will have to create a standard WordPress menu under <em>Appearance / Menus</em> before you can insert this element. <a href="#menus">Learn more about menus</a>.</li>
+						<li>The <strong>TownPress Posts</strong> section displays standard WordPress posts. It can be inserted either via <a href="#front-page">block editor</a> or via the <a href="#shortcode-lsvr_townpress_posts">lsvr_townpress_posts</a> shortcode.</li>
+						<li>The <strong>TownPress Menu</strong> widget can be added to any sidebar under <em>Appearance / Widgets</em>. You will have to create a standard WordPress menu under <em>Appearance / Menus</em> before you can insert this widget. <a href="#menus">Learn more about menus</a>.</li>
+						<li>The <strong>TownPress Weather</strong> widget can be added to any sidebar under <em>Appearance / Widgets</em>. This widget requires <a href="http://openweathermap.org" target="_blank">OpenWeatherMap.org</a> API key which can be inserted under <em>Appearance / Customize / Misc</em>.
+						<li>The <strong>LSVR Featured Gallery</strong> widget can be added to any sidebar under <em>Appearance / Widgets</em>. This widget requires <a href="#plugins-installation-bundled">LSVR Galleries</a> plugin.</li>
+						<li>The <strong>LSVR Notices</strong> widget can be added to any sidebar under <em>Appearance / Widgets</em>. This widget requires <a href="#plugins-installation-bundled">LSVR Notices</a> plugin.</li>
+						<li>The <strong>Image</strong> widget can be added to any sidebar under <em>Appearance / Widgets</em>. This is a standard WordPress widget.</li>
+						<li>The <strong>LSVR Directory</strong> widget can be added to any sidebar under <em>Appearance / Widgets</em>. This widget requires <a href="#plugins-installation-bundled">LSVR Directory</a> plugin.</li>
+						<li><strong>Footer</strong> settings (such as background image) can be managed under <em>Appearance / Customize / Footer</em>.</li>
+						<li>The <strong>Text</strong> widget can be added to the <strong>Footer Widgets</strong> sidebar under <em>Appearance / Widgets</em>.</li>
+						<li>The <strong>LSVR Events</strong> widget can be added to the <strong>Footer Widgets</strong> sidebar under <em>Appearance / Widgets</em>. This widget requires <a href="#plugins-installation-bundled">LSVR Events</a> plugin.</li>
+						<li>The <strong>LSVR Documents</strong> widget can be added to the <strong>Footer Widgets</strong> sidebar under <em>Appearance / Widgets</em>. This widget requires <a href="#plugins-installation-bundled">LSVR Documents</a> plugin.</li>
+						<li>The <strong>Text</strong> widget can be added to the <strong>Footer Widgets</strong> sidebar under <em>Appearance / Widgets</em>.</li>
+						<li><strong>Social Links</strong> can be managed under <em>Appearance / Customize / Social Links</em>. You can display or hide them in footer under <em>Appearance / Customize / Footer</em> via <em>Show Social Links in Footer</em> option.</li>
+						<li><strong>Foter Text</strong> can be edited under <em>Appearance / Customize / Footer</em>.</li>
+						<li><strong>Foter Menu</strong> can be managed under <em>Appearance / Menus</em>. <a href="#menus">Learn more about menus</a></li>
+					</ol>
+
+				</section>
+				<!-- QUICK OVERVIEW : end -->
+
+				<hr>
+
+				<!-- INSTALLATION AND SETUP : begin -->
+				<section id="installation-and-setup">
+
+					<h2>Installation &amp; Setup</h2>
+
+					<p>The very first step is to <a href="http://codex.wordpress.org/Installing_WordPress" target="_blank">install WordPress itself</a>. Once installed, we can proceed to the theme and plugins installation.</p>
+
+					<div class="c-alert-message">
+						<p>Please check out <a href="https://wordpress.org/about/requirements/">the recommended server requirements</a> for WordPress. <strong>Your PHP version has to be 5.6 or higher</strong>.</p>
+					</div>
+
+					<div class="c-alert-message">
+						<p>Besides the recommended server requirements for WordPress, make sure your <strong>PHP memory</strong> for WordPress is set to at least 64MB. However, if you are going to use several 3rd party plugins, we recommend 128MB. You can read more about changing the PHP memory in <a href="https://codex.wordpress.org/Editing_wp-config.php#Increasing_memory_allocated_to_PHP">the WordPress codex</a></p>
+					</div>
+
+					<!-- THEME INSTALLATION : begin -->
+					<section id="theme-installation">
+
+						<h3>Theme Installation</h3>
+
+						<p>If you haven’t already, download the full package
+						from <a href="http://themeforest.net/downloads" target="_blank">your downloads</a> on ThemeForest.</p>
+
+						<p><img src="content/installation-10.jpg" alt="installation-10"></p>
+						<ol class="caption">
+							<li>Click on the <em>Download</em> button next to your purchased item</li>
+							<li>Choose <em>All files &amp; documentation</em> and download the zip file</li>
+						</ol>
+
+						<p><img src="content/installation-20.jpg" alt=""></p>
+						<ol class="caption">
+							<li>Enable email notifications if you want to be informed when the new update is available</li>
+							<li>If you like the theme, please don't forget to rate it 5*. Thank you!</li>
+						</ol>
+
+						<h4 id="theme-installation-parent">Parent Theme Installation</h4>
+
+						<p>When you unzip the downloaded file, you will see a bunch of folders. The most important one is the
+						<em>THEME</em> folder which contains the installable theme .ZIP.</p>
+
+						<p><img src="content/installation-30.jpg" alt=""></p>
+						<ol class="caption">
+							<li><em>THEME</em> folder contains the installable theme .ZIP</li>
+						</ol>
+
+						<p>Open your WordPress admin and navigate to <em>Appearance / Themes</em></p>
+						<p><img src="content/installation-40.jpg" alt=""></p>
+						<ol class="caption">
+							<li>You can manage themes under<em> Appearance / Themes</em></li>
+						</ol>
+
+						<p>Upload the installable townpress.zip file</p>
+						<p><img src="content/installation-50.jpg" alt="">
+						<ol class="caption">
+							<li>Click on the <em>Add New</em> button</li>
+							<li>Click on the <em>Upload Theme</em> button</li>
+							<li>Choose theme .ZIP file</li>
+							<li>Submit the file</li>
+						</ol>
+
+		            	<div class="c-alert-message">
+		            		<p>If you have problems installing your theme via admin (as described above), you can try to <a href="https://codex.wordpress.org/Using_Themes#Adding_New_Themes_Manually_.28FTP.29" target="_blank">install it via FTP</a></p>
+		            	</div>
+
+						<h4 id="theme-installation-child">Child Theme Installation</h4>
+						<p>If you don’t know what a WordPress child theme is, please read <a href="http://codex.wordpress.org/Child_Themes" target="_blank">this article
+						in the WordPress codex</a>. The article also explains how to create a child theme, but don't worry, <strong>the TownPress child theme is already included</strong> in the package.</p>
+						<p>This documentation assumes that you are running the child theme, so <strong>it is highly recommended to install it</strong>.
+						The Child theme .ZIP can be found in <em>Child Theme</em> folder. Install it in exactly the same way as parent theme, described in previous steps.</p>
+						<p>Once you have both parent and child themes installed, <strong>you need to activate the child one</strong>.</p>
+
+					</section>
+					<!-- THEME INSTALLATION : end -->
+
+					<hr>
+
+					<!-- PLUGINS INSTALLATION : begin -->
+					<section id="plugins-installation">
+
+						<h3>Plugins Installation</h3>
+
+						<p>Before we proceed to plugins installation, let's talk about them a little bit first. This theme comes prepackaged with several plugins. Basically, any major functionality (like events, directory, galleries, etc.) has a separate plugin. This has one big advantage - <strong>you can choose which one you need</strong>. For example, if you don't need the events functionality for your site (or you plan to use a 3rd party plugin for that), there is no reason to install the LSVR Events plugin. And same goes for LSVR Notices, LSVR Directory, LSVR Galleries, LSVR Documents and LSVR People plugins as well. But let's do a quick overview of all of those plugins so you can decide for yourself which ones you need:</p>
+						<ul>
+							<li><strong>LSVR Framework</strong> - this plugin contains a lot of custom functionality used throughout the theme and LSVR plugins, such as custom metaboxes and customizer fields. You should definitely install this one.</li>
+							<li><strong>LSVR TownPress Toolkit</strong> - it contains the theme specific shortcodes (for example those used for the default front pages) and some custom widgets.</li>
+							<li><strong>LSVR Elements</strong> - this plugins adds some basic shortcodes and widgets like Definition List, Progress Bar and Feature.</li>
+							<li><strong>LSVR Notices</strong> - notices are basically stripped-down standard posts, ideal for short messages which you can display in the sidebar of your site. However, if you rather prefer to use standard WP posts for all types of news, long or short, don't install this plugin.</li>
+							<li><strong>LSVR Directory</strong> - it handles the Listing custom post type functionality and all its widgets. If you don't need the directory functionality or are going to use a 3rd party solution for that, don't install.</li>
+							<li><strong>LSVR Events</strong> - this plugin handles the Event custom post type functionality and all its widgets. If you don't need the events functionality or are going to use a 3rd party solution for that, don't install.</li>
+							<li><strong>LSVR Galleries</strong> - this plugin handles the Gallery custom post type functionality and all its widgets. If you don't need the galleries functionality or are going to use a 3rd party solution for that, don't install.</li>
+							<li><strong>LSVR Documents</strong> - this plugin handles the Document custom post type functionality and all its widgets. If you don't need the documents functionality or are going to use a 3rd party solution for that, don't install.</li>
+							<li><strong>LSVR People</strong> - this plugin handles the Person custom post type functionality and all its widgets. If you don't need the people functionality or are going to use a 3rd party solution for that, don't install.</li>
+							<li><strong>LSVR 3rd Party Toolkit</strong> - this plugin handles support for 3rd party plugins like Elementor and WPBakery Page Builder. Do not install this plugin if you are going to use the default WordPress block editor (Gutenberg) instead.</li>
+							<li><strong>Envato Market</strong> - it allows automatic theme updates for themes purchased from Envato Market. This is probably the easiest way to keep your theme up to date. However, it is not the only way. You can always just download the latest version directly from your account on Envato Market and either reinstall the theme or overwrite files via FTP. So if you prefer to update the theme manually, you won't need this plugin.</li>
+						</ul>
+
+						<p>One last thing. You may be worried that so many plugins can have a performance impact on your site. The truth is that <strong>the number of plugins alone has no real impact on the performance</strong>.
+						It's the way they are coded that's important. Since almost all of those plugins were coded in-house, their optimization and performance is fully under our control.
+						Also, don't forget that the <strong>quality of your hosting plays a very significant role in overall performance</strong> of your site.</p>
+
+						<h4 id="plugins-installation-bundled">Bundled Plugins</h4>
+						<p>Let's finally install some plugins. Once you've activated the theme, you should see a prompt message at the top of your admin informing you about recommended plugins.</p>
+
+						<p><img src="content/plugins-installation-10.jpg" alt=""></p>
+						<ol class="caption">
+							<li>Click on <em>Begin installing plugins</em></li>
+						</ol>
+
+						<p><img src="content/plugins-installation-20.jpg" alt=""></p>
+						<ol class="caption">
+							<li>Select either all plugins or just the plugins you need</li>
+							<li>Choose <em>Install</em></li>
+							<li>Hit <em>Apply</em></li>
+						</ol>
+
+						<p><img src="content/plugins-installation-30.jpg" alt=""></p>
+						<ol class="caption">
+							<li>Wait for plugins to be installed and then click on <em>Return to Required Plugins installer</em></li>
+						</ol>
+
+						<p><img src="content/plugins-installation-40.jpg" alt=""></p>
+						<ol class="caption">
+							<li>Select all plugins</li>
+							<li>Choose <em>Activate</em></li>
+							<li>Hit <em>Apply</em></li>
+						</ol>
+
+						<p>After you activate plugins, head to your <em>Dashboard</em> and that’s it. Plugins should now be installed and activated.
+						Remember that <strong>all bundled plugins can be found in the <em>Plugins</em> folder in full package</strong>, so you can install any of those plugins manually anytime you need (via <em>Plugins / Add New / Upload Plugin</em>).</p>
+
+						<h4 id="plugins-installation-3rd-party-bundled">Bundled 3rd Party Plugins</h4>
+						<ul>
+							<li><strong>WPBakery Page Builder for WordPress (formerly Visual Composer)</strong> - this is an alternative for the native block editor (Gutenberg). It was the preferred page builder for this theme before the WordPress 5.0. Nowadays, unless you have some specific reasons, use the native block editor (Gutenberg) instead. Please note that <strong>this is a bundled premium plugin <a href="https://help.market.envato.com/hc/en-us/articles/213762463-Bundled-Plugins" target="_blank">which has some limitations</a></strong> (this is the same for ANY theme which bundle this plugin). You can ingore any "license activation" notifications. <strong>You don't have to activate the plugin's license for it to work</strong>. You can find its installation .ZIP in the "Plugins" folder in the full package (js_composer.zip).</li>
+						</ul>
+
+						<h4 id="plugins-installation-3rd-party">3rd Party Plugins</h4>
+						<p>Here is a list of some useful 3rd party plugins. You can install them by typing their name in the search box under <em>Plugins / Add New</em>:</p>
+						<ul>
+							<li><strong><a href="https://wordpress.org/plugins/wordfence/" target="_blank">Wordfence Security</a></strong> - very popular WordPress security plugin.</li>
+							<li><strong><a href="https://wordpress.org/plugins/bbpress/" target="_blank">bbPress</a></strong> - the most popular forum plugin. This theme comes with a custom styling for bbPress plugin.</li>
+							<li><strong><a href="https://wordpress.org/plugins/w3-total-cache/" target="_blank">W3 Total Cache</a></strong> - a must-have caching plugin.</li>
+							<li><strong><a href="https://wordpress.org/plugins/contact-form-7/" target="_blank">Contact Form 7</a></strong> - great plugin for creating simple contact forms. It was used to create a demo contact form as well.</li>
+							<li><strong><a href="https://wordpress.org/plugins/intuitive-custom-post-order/" target="_blank">Intuitive Custom Post Order</a></strong> - allows you to reorder your posts and categories via drag &amp; drop.</li>
+						</ul>
+
+					</section>
+					<!-- PLUGINS INSTALLATION : end -->
+
+					<hr>
+
+					<!-- DEMO IMPORT : begin -->
+					<section id="demo-import">
+
+						<h3>Demo Setup</h3>
+
+						<div class="c-alert-message">
+							<p>Please note that <strong>demo images are not included</strong> (placeholder images will be imported instead).</p>
+							<p><strong>Demo forum content is also not included</strong> (nor is the <a href="https://wordpress.org/plugins/bbpress/" target="_blank">bbPress plugin</a>), however, you can <a href="https://bbpress.trac.wordpress.org/attachment/ticket/2516/bbpress-unit-test-data.xml" target="_blank">download a bbPress unit test data here</a>.</p>
+						</div>
+
+						<div class="c-alert-message">
+							<p>Demo data were created with the <strong>block editor (Gutenberg)</strong>. Imported pages won't be compatible with 3rd party page builders (e.g. WPBakery Page Builder). The old demo data created with WPBakery Page Builder can be found in the full package in the Legacy / VC demo data folder. <a href="#demo-import-manual">You can import them manually</a>.</p>
+						</div>
+
+						<p>Let start by saying that <strong>we do not recommend to import the demo data</strong> at all. Why? Because you are basically bloating your site with data you will eventually want to to get rid of sooner or later. You may be tempted to have your site to look like the demo quickly and then start customizing it to your needs, but you are actually making lot of unnecessary work for yourself. Our professional advice on how to build the site using this theme (or any other WordPress theme for that sake) is to <strong>read the documentation first</strong> (at least just browse the titles). Then (after you install the theme and all its plugins) <strong>head to Appearance / Customize and browse through all the available options</strong> to familiarize yourself with the theme. Then go back to the documentation, head to <a href="#post-installation-setup">Post-Installation Setup</a> and simply follow all the steps, read all chapters thoroughly and apply all that knowledge to your own site. That said, it is up to you of course. If you want to proceed with the demo import, read further.</p>
+
+						<h4 id="demo-import-quick">Quick Demo Import</h4>
+
+						<p>The quickest way to import the demo data is using the <a href="https://wordpress.org/plugins/one-click-demo-import/" target="_blank">One Click Demo Import</a> plugin.
+						To install it, simply go to <em>Plugins / Add New</em> and type "One Click Demo Import" into the search field. Once installed and activated, go to <em>Appearance / Import Demo Content</em> where you can import content, customizer settings and widgets separately (they should be imported exactly in this order).</p>
+						<p><img src="content/demo-import-10.jpg" alt="">
+						<ol class="caption">
+							<li>Import TownPress content first</li>
+							<li>Then import Townpress Customizer</li>
+							<li>Import TownPress Widgets last</li>
+							<li>If you have problmes with importing, you can try to upload all files manually. All import files can be found in the full package in the Demo Data folder (content.xml, widgets.wie and customizer.dat).</li>
+						</ol>
+						<p>Once you've imported all three (content, customizer settings and widgets), <a href="#demo-import-after">continue here</a>.</p>
+
+						<h4 id="demo-import-manual">Manual Demo Import</h4>
+
+						<p>If you want to have more control over imported data, you can do it manually. Demo data can be found in the <strong><em>Demo Data</em> folder in full package</strong>.</p>
+
+						<h5 id="demo-import-manual-content">Manual Content Import</h5>
+
+						<p>You will notice there are several .xml files in the <em>Demo Data</em> folder. You can decide to import either all posts and pages or just specific post type posts.</p>
+						<p>To import the content, navigate to <em>Tools / Import</em> and click on <em>WordPress</em>. You may be prompted to install the Importer plugin if you don’t have it already.
+						After you install and activate it, go back to <em>Tools / Import / WordPress</em>. Now choose which content you want to import. <strong>If you want to import everything, choose the <em>content.xml</em> file</strong>.
+						If you want to upload events only, choose <em>events.xml</em>. You can of course do multiple imports if you want to import more than just one .xml file (for example <em>events.xml</em> and then <em>documents.xml</em>).</p>
+
+						<p>If you haven't installed all bundled plugins but are trying to import the content.xml file, you may notice several errors during the import process. Those are caused by the fact that posts related to missing plugins can't be imported (for example event posts without LSVR Events plugin installed). You can ignore those error messages, as they shouldn't affect the import of the other posts.</p>
+
+						<h5 id="demo-import-manual-customizer">Manual Customizer Settings Import</h5>
+
+						<p>You will need the <a href="https://wordpress.org/plugins/customizer-export-import/" target="_blank">Customizer Export/Import</a> plugin to import customizer data.
+						Once installed and activated, go to <em>Appearance / Customize / Export/Import</em> and upload the <strong><em>customizer.dat</em></strong> file from the <em>Demo Data</em> folder.</p>
+
+						<h5 id="demo-import-manual-widgets">Manual Widgets Import</h5>
+
+						<p>You will need the <a href="https://wordpress.org/plugins/widget-importer-exporter/" target="_blank">Widget Importer &amp; Exporter</a> plugin to import widgets data.
+						Once installed and activated, go to <em>Tools / Widget Importer &amp; Exporter</em> and upload the <strong><em>widgets.wie</em></strong> file from the <em>Demo Data</em> folder.</p>
+
+						<h5 id="demo-import-manual-contac-form">Contact Form Import</h5>
+
+						<p>Contact form seen on the demo, which was created using the <a href="https://wordpress.org/plugins/contact-form-7/" target="_blank">Contact Form 7</a> plugin, is not included in the main demo import files. You can import it manually under <em>Tools / Import / WordPress</em> using the <strong><em>cf7-contact-form.xml</em></strong> file from the <em>Demo Data</em> folder (<a href="https://contactform7.com/docs/" target="_blank">don't forget to configure the form after the import</a>).</p>
+
+						<h4 id="demo-import-after">After Demo Import</h4>
+
+						<h5 id="demo-import-events">Regenerate Events</h5>
+						<p>If you did quick import or manual import with events, head to <em>Tools / Regen. Events</em> and hit the <em>Regenerate</em> button. You won't be able to see any imported events on your front-end unless you do that. If you are experiencing any issues with this tool, you will have to resave each of the event posts one by one (at least those event posts you want to display).</p>
+						<p>Another important thing to keep in mind when importing events is that by default, events archive will show only the upcoming events. But <strong>some or all of the demo events may have already ended</strong> by the time you purchased the theme and did the import. The demo data may not be kept up to date with current demo site. The solution is to simply <strong>change the start/end dates for each event post you want to display on your site</strong>.<p>
+
+						<h5 id="demo-import-menus-front-page">Front Page</h5>
+						<p>You will need to <a href="#post-installation-setup-front-page">set your front page and news page</a> under <em>Settings / Reading</em>.</p>
+
+						<h5 id="demo-import-menus-widgets">Menus and Widgets</h5>
+						<p>Due to some limitations of the importing functionality, some sidebars and menus may not be set properly after the import. Just go to <em>Appearance / Widget</em> to configure your sidebars (for example you may want to set the menu of <strong>TownPress Menu</strong> widget to "Main Menu" in the <strong>Default Left Sidebar</strong>).</p>
+
+						<h5 id="demo-import-menu-links">Menu Links</h5>
+						<p>You may notice that some of the menu links won't work because they were saved as absolute URL. To make them work, either edit them manually under <a href="#menus">Appearance / Menus</a>, or <a href="https://wordpress.org/plugins/velvet-blues-update-urls/" target="_blank">use a plugin</a> to change them to the correct URL. Basically you need to change "http://localhost/wordpress/townpress-demo" to your site's URL.</p>
+
+					</section>
+					<!-- DEMO SETUP : end -->
+
+					<hr>
+
+					<!-- POST-INSTALLATION SETUP : begin -->
+					<section id="post-installation-setup">
+
+						<h3>Post-Installation Setup</h3>
+
+						<h4 id="post-installation-setup-general">General Settings</h4>
+						<p>Your first post-installation steps should head into <em>Settings / General</em>.</p>
+						<p><strong><em>Time Zone</em></strong>, <strong><em>Date Format</em></strong> and <strong><em>Time Format</em></strong> settings will be used to display date info for all post types (including event start and end dates), so make sure they are set correctly based on your locale.</p>
+
+						<h4 id="post-installation-setup-permalinks">Permalinks Settings</h4>
+						<p>Now head to <em>Settings / Permalinks</em> and change <strong><em>Common Settings</em></strong> to <strong><em>Post name</em></strong>.
+						You can also change URL slugs for all LSVR custom post types and their taxonomies below if needed.</p>
+
+						<h4 id="post-installation-setup-front-page">Front Page / Blog Page</h4>
+						<p>If you've imported the demo content, head to <em>Settings / Reading</em> and choose which pages should be used as your <strong><em>Front page</em></strong> and <strong><em>Posts page</em></strong>.
+						If you haven't imported the demo content, then don't forget to come back to this option once you <a href="#front-page">create your front page</a> and blog pages. <a href="https://codex.wordpress.org/Creating_a_Static_Front_Page" target="_blank">More info</a>.</p>
+
+						<h4 id="post-installation-setup-menus">Managing Menus</h4>
+						<p>If you already have some pages / posts on your site (for example via importing demo content), you should check out <em><a href="#menus">Appearance / Menus</a></em> to manage your site's menus.</p>
+
+						<h4 id="post-installation-setup-media">Media Settings</h4>
+						<p>Head to <em>Settings / Media</em> and change the settings to the following values:</p>
+						<ul>
+							<li><em>Thumbnail size</em> - <strong>300x300</strong> (crop enabled)</li>
+							<li><em>Medium size</em> - <strong>600x600</strong></li>
+							<li><em>Large size</em> - <strong>1024x1024</strong></li>
+						</ul>
+						<p>If you already have some images on your site, use a <a href="https://wordpress.org/plugins/regenerate-thumbnails/" target="_blank">3rd party plugin</a> to regenerate new image sizes based on the settings above.</p>
+
+						<h4 id="post-installation-setup-map-settings">Map Settings</h4>
+						<p>If you are going to use the Directory or Events functionalities via bundled LSVR plugins, or a header map, you will need to choose a <strong><em>maps provider</em></strong> for built-in maps to work.
+						You can do that under <em>Appearance / Customize / Map Settings</em>. Please note that some providers require an unique API key for maps to work.</p>
+
+						<h4 id="post-installation-setup-openweathermap">OpenWeatherMap.org API Key</h4>
+						<p>If you are going to use the <strong>TownPress Weather</strong> widget, you will need a <a href="http://openweathermap.org/" target="_blank">OpenWeatherMap.org API Key</a>, which you can insert under <em>Appearance / Customize / Misc</em>.
+
+						<h4 id="post-installation-setup-typography">Typography</h4>
+						<p>If your site is running in a language other than English, you should check out <em>Appearance / Customize / Typography</em> and set the <strong><em>Font Subsets</em></strong> option accordingly. Please note that not all font families support all font subsets.</p>
+						<p>You may also notice that not all Google Fonts are available - we handpicked only the most popular ones. If you need to use font which is not available, disable Google Fonts (uncheck <strong><em>Enable Google Fonts</em></strong> option) and use some <a href="https://wordpress.org/plugins/search/google+fonts/" target="_blank">3rd party plugin</a> instead.</p>
+
+					</section>
+					<!-- POST-INSTALLATION SETUP : end -->
+
+				</section>
+				<!-- INSTALLATION AND SETUP : end -->
+
+				<hr>
+
+				<!-- CONTENT EDITING : begin -->
+				<section id="content-editing">
+
+					<h2>Content Editing</h2>
+
+					<p>TownPress comes with a bunch of custom post types. Working with them is very similar to <a href="https://codex.wordpress.org/Writing_Posts" target="_blank">working with standard WordPress posts</a>.</p>
+
+					<!-- POSTS AND PAGES : begin -->
+					<section id="posts-and-pages">
+
+						<h3>Standard Posts and Pages</h3>
+						<p>Posts and pages are part of the core WordPress functionality. The best place to learn more about them is the <a href="https://codex.wordpress.org" target="_blank">WordPress Codex</a>.</p>
+						<ul>
+							<li><strong>Global theme-specific posts settings</strong> can be changed under <em>Appearance / Customize / Standard Posts</em>.</li>
+							<li><a href="https://codex.wordpress.org/Posts" target="_blank">Learn more about <strong>posts</strong></a></li>
+						 	<li><a href="https://codex.wordpress.org/Pages" target="_blank">Learn more about <strong>pages</strong></a></li>
+					 	</ul>
+
+					</section>
+					<!-- POSTS AND PAGES : end -->
+
+					<hr>
+
+					<!-- DIRECTORY LISTING : begin -->
+					<section id="cpt-listing">
+
+						<h3>Directory Listing</h3>
+		            	<div class="c-alert-message">
+		            		<p><strong><a href="#plugins-installation">LSVR Directory</a></strong> plugin has to be installed and active for this feature to work.</p>
+		            	</div>
+						<ul>
+							<li>Default directory URL is <strong><em>yoursite.com/directory</em></strong>. You can change it under <em>Settings / Permalinks</em>.</li>
+							<li>You can manage your listing posts under <em>Directory</em>.</li>
+							<li>The settings of a particular listing can be edited via the <em>Listing Settings</em> panel located under the content editor.</li>
+							<li><em>Featured Image</em> of the listing will be used as a map thumbnail.</li>
+							<li>You can add images to your listing via the <em>Listing Gallery</em> panel located under the content editor.</li>
+							<li>Add <a href="https://schema.org" target="_blank">schema.org</a> metadata via the <em>Listing Metadata</em> panel located under <em>Listing Settings</em>.</li>
+							<li><strong>Global directory settings</strong> can be changed under <em>Appearance / Customize / Directory</em>.</li>
+							<li>This post type comes with several custom widgets which you can find under <em>Appearance / Widgets</em>.</li>
+						</ul>
+
+					</section>
+					<!-- DIRECTORY LISTING : begin -->
+
+					<hr>
+
+					<!-- EVENT : begin -->
+					<section id="cpt-event">
+
+						<h3>Event</h3>
+		            	<div class="c-alert-message">
+		            		<p><strong><a href="#plugins-installation">LSVR Event</a></strong> plugin has to be installed and active for this feature to work.</p>
+		            	</div>
+						<ul>
+							<li>Default events URL is <strong><em>yoursite.com/events</em></strong>. You can change it under <em>Settings / Permalinks</em>.</li>
+							<li>You can manage your event posts under <em>Events</em>.</li>
+							<li>The settings of a particular event can be edited via the <em>Event Settings</em> panel located under the content editor.</li>
+							<li><strong>Global events settings</strong> can be changed under <em>Appearance / Customize / Events</em>.</li>
+							<li>This post type comes with several custom widgets which you can find under <em>Appearance / Widgets</em>.</li>
+						</ul>
+
+					</section>
+					<!-- EVENT : begin -->
+
+					<hr>
+
+					<!-- GALLERY : begin -->
+					<section id="cpt-gallery">
+
+						<h3>Gallery</h3>
+		            	<div class="c-alert-message">
+		            		<p><strong><a href="#plugins-installation">LSVR Gallery</a></strong> plugin has to be installed and active for this feature to work.</p>
+		            	</div>
+						<ul>
+							<li>Default galleries URL is <strong><em>yoursite.com/galleries</em></strong>. You can change it under <em>Settings / Permalinks</em>.</li>
+							<li>You can manage your gallery posts under <em>Galleries</em>.</li>
+							<li>You can add images to your gallery via the <em>Gallery Images</em> panel located under the content editor.</li>
+							<li><strong>Global galleries settings</strong> can be changed under <em>Appearance / Customize / Galleries</em>.</li>
+							<li>This post type comes with several custom widgets which you can find under <em>Appearance / Widgets</em>.</li>
+						</ul>
+
+					</section>
+					<!-- GALLERY : begin -->
+
+					<hr>
+
+					<!-- DOCUMENT : begin -->
+					<section id="cpt-document">
+
+						<h3>Document</h3>
+		            	<div class="c-alert-message">
+		            		<p><strong><a href="#plugins-installation">LSVR Documents</a></strong> plugin has to be installed and active for this feature to work.</p>
+		            	</div>
+						<ul>
+							<li>Default documents URL is <strong><em>yoursite.com/documents</em></strong>. You can change it under <em>Settings / Permalinks</em>.</li>
+							<li>You can manage your document posts under <em>Documents</em>.</li>
+							<li>Each document post can contain multiple <strong>file attachments</strong> which can be added via the <em>Document Settings</em> panel located under the content editor.</li>
+							<li>If all your document posts contain only attachments and no real text content, you may want to switch your document archive layout to <strong><em>Attachment View</em></strong> under <em>Appearance / Customize / Documents</em>.</li>
+							<li><strong>Global documents settings</strong> can be changed under <em>Appearance / Customize / Documents</em>.</li>
+							<li>This post type comes with several custom widgets which you can find under <em>Appearance / Widgets</em>.</li>
+						</ul>
+
+					</section>
+					<!-- DOCUMENT : begin -->
+
+					<hr>
+
+					<!-- PERSON : begin -->
+					<section id="cpt-person">
+
+						<h3>Person</h3>
+		            	<div class="c-alert-message">
+		            		<p><strong><a href="#plugins-installation">LSVR People</a></strong> plugin has to be installed and active for this feature to work.</p>
+		            	</div>
+						<ul>
+							<li>Default people URL is <strong><em>yoursite.com/people</em></strong>. You can change it under <em>Settings / Permalinks</em>.</li>
+							<li>You can manage your person posts under <em>People</em>.</li>
+							<li><strong>Global people settings</strong> can be changed under <em>Appearance / Customize / People</em>.</li>
+							<li>This post type comes with several custom widgets which you can find under <em>Appearance / Widgets</em>.</li>
+						</ul>
+
+					</section>
+					<!-- PERSON : begin -->
+
+					<hr>
+
+					<!-- NOTICE : begin -->
+					<section id="cpt-notice">
+
+						<h3>Notice</h3>
+		            	<div class="c-alert-message">
+		            		<p><strong><a href="#plugins-installation">LSVR Notices</a></strong> plugin has to be installed and active for this feature to work.</p>
+		            	</div>
+						<ul>
+							<li>Default notices URL is <strong><em>yoursite.com/notices</em></strong>. You can change it under <em>Settings / Permalinks</em>.</li>
+							<li>You can manage your notice posts under <em>Notices</em>.</li>
+							<li><strong>Global notices settings</strong> can be changed under <em>Appearance / Customize / Notices</em>.</li>
+							<li>This post type comes with several custom widgets which you can find under <em>Appearance / Widgets</em>.</li>
+						</ul>
+
+					</section>
+					<!-- NOTICE : begin -->
+
+				</section>
+				<!-- CONTENT EDITING : end -->
+
+				<hr>
+
+				<!-- CUSTOMIZATION : begin -->
+				<section id="customization">
+
+					<h2>Customization</h2>
+
+					<!-- FRONT PAGE : begin -->
+					<section id="front-page">
+
+						<h3>Front Page</h3>
+
+						<p>The following tutorial assumes that you want to create a front page similar to the "Classic Home" from the demo. The preferred way to create a front page is <strong>using the native WordPress block editor (Gutenberg)</strong>. Alternatively, you can use the <a href="#plugins-installation-3rd-party-bundled">WPBakery Page Builder</a> or <a href="https://wordpress.org/plugins/elementor/" target="_blank">Elementor</a> plugin. All elements and their respective options mentioned in this tutorial are available there as well (however it is highly recommended to use the Gutenberg, unless you have some very specific reason not to).</p>
+
+						<ol>
+							<li>This demo page contains a TownPress Sitemap block which requires a <strong>standard WordPress menu</strong> to work. To create such menu, head to <em>Appearance / Menus</em> and create a simple two dimensional menu. If you've never created a WordPress menu before, please head to <a href="https://codex.wordpress.org/WordPress_Menu_User_Guide" target="_blank">WordPress Codex</a>.
+								<p><img src="content/front-page-10.jpg" alt="">
+								<ol class="caption">
+									<li>You can add custom links to link non-standard pages and posts (for example http://yoursite.com/events for events archive)</li>
+								</ol></p>
+							</li>
+							<li>Once your menu is ready, let's create a new page under <em>Pages</em>, or edit an existing one.</li>
+							<li>Type the title - it can contain some basic HTML tags.</li>
+							<li>Set its page template to <strong><em>Not Boxed</em></strong> (under Page Attributes).
+								<p><img src="content/front-page-20.jpg" alt="">
+								<ol class="caption">
+									<li>Insert title. Some basic HTML is allowed</li>
+									<li>Set page template to "Not Boxed"</li>
+									<li>You can assign left and right sidebars. <a href="#sidebars-widgets">Learn more</a></li>
+								</ol></p>
+							</li>
+							<li>Display list with all blocks by clicking on the "plus" button in the top left of the interface.</li>
+							<li>You can hide/expand the categories. Add the <strong><em>TownPress Sitemap</em></strong> block from <em>TownPress</em> category.
+								<p><img src="content/front-page-30.jpg" alt="">
+								<ol class="caption">
+									<li>Display list of blocks</li>
+									<li>All blocks which come with the theme can be found under LSVR Elements, LSVR Widgets and TownPress categories</li>
+									<li>Add the TownPress Sitemap block</li>
+								</ol></p>
+							</li>
+
+							<li>Once the block is loaded into the content, click on it to display its settings in the right sidebar.</li>
+							<li>The most important option to set here is the <em>Menu</em>. Use it to select the menu you've created in the first step. Change any other options as you like.
+								<p><img src="content/front-page-40.jpg" alt="">
+									<ol class="caption">
+										<li>Click on the block</li>
+										<li>Choose the menu you've created in the first step</li>
+									</ol>
+								</p>
+							</li>
+							<li>The second block we will add is the <strong><em>TownPress Posts</em></strong>. Insert it in the same fashion as the previous one.</li>
+							<li>This block displays standard WordPress posts so make sure you already have some.</li>
+							<li>Once you insert it, click on the block and set its options to your liking in the right sidebar.
+								<p><img src="content/front-page-50.jpg" alt="">
+									<ol class="caption">
+										<li>Click on the block</li>
+										<li>Change the options to your liking</li>
+									</ol>
+								</p>
+							</li>
+							<li>Once you are done, save your page and set it as your front page under <a href="#post-installation-setup-front-page">Settings / Reading</a>.</li>
+						</ol>
+
+					</section>
+					<!-- FRONT PAGE : end -->
+
+					<hr>
+
+					<!-- MENUS : begin -->
+					<section id="menus">
+
+						<h3>Menus</h3>
+
+						<p>Menus can be managed under <em>Appearance / Menus</em>. This theme contains three static menu locations - <strong><em>Header Menu</em></strong>, <strong><em>Header Mobile Menu</em></strong> and <strong><em>Footer Menu</em></strong>. You can also put a menu into your sidebar using <strong>TownPress Menu</strong> widget under <em>Appearance / Widgets</em>. More info about managing your menus can be found in the <a href="https://codex.wordpress.org/WordPress_Menu_User_Guide" target="_blank">WordPress Codex</a>.</p>
+
+						<p>Since this may be a bit overwhelming at first, let's take a better look on how to recreate a main menu sytem from the demo.</p>
+
+						<p><img src="content/menus-10.jpg" alt="">
+						<ol class="caption">
+							<li>Select an exiting menu or create new</li>
+							<li>Choose which post types and taxonomies will be available in the left sidebar</li>
+							<li>Insert a recognizable name</li>
+							<li>Add items to your menu</li>
+							<li>Select menu location. Since we are not using a regular header menu, select just "Header Mobile Menu"</li>
+							<li>Save your menu</li>
+						</ol>
+
+						<p>Right now we have just a mobile menu which will be displayed only on mobile devices. If you want to display the same menu in a header for desktop devices as well, then select the "Header Menu" location too. However, in our demo we are using the sidebar menu instead. So let's head to <strong>Appearance / Widgets</strong> and insert <strong>TownPress Menu widget</strong> into <strong>Default Left Sidebar</strong> (or any sidebar where you want to put this menu).</p>
+
+						<p><img src="content/menus-20.jpg" alt="">
+						<ol class="caption">
+							<li>Select your menu</li>
+							<li>Since we are using a dedicated mobile menu which contains the same items as this side menu, there is no need for this side menu to be displayed on mobile devices too</li>
+							<li>Save your settings</li>
+						</ol>
+
+						<h4 id="menus-megamenu">Header Mega Menu</h4>
+						<p>To display the submenu of a header menu as a megamenu, insert "<strong>lsvr-megamenu</strong>" into the <strong>CSS Classes</strong> field. <strong>This will work only for top level items</strong> and only if the menu's location is set to <strong><em>Header Menu</em></strong>.</p>
+						<p><img src="content/menus-30.jpg" alt="">
+						<ol class="caption">
+							<li>Show Screen Options</li>
+							<li>Make sure <em>CSS Classes</em> option is checked</li>
+							<li>Add "lsvr-megamenu" into <em>CSS Classes</em> field</li>
+							<li>Save the menu</li>
+						</ol>
+
+					</section>
+					<!-- MENUS : end -->
+
+					<hr>
+
+					<!-- SIDEBARS & WIDGETS : begin -->
+					<section id="sidebars-widgets">
+
+						<h3>Sidebars &amp; Widgets</h3>
+
+						<p>Sidebars can be managed under <em>Appearance / Widgets</em>. By default there are three sidebars - <strong>Default Left Sidebar</strong>, <strong>Default Right Sidebar</strong> and <strong>Footer Widgets</strong> which, as the name implies, contain widgets displayed in the footer of the site.</p>
+
+						<p class="c-alert-message">
+							You can create additional sidebars under <em>Appearance / Customize / Custom Sidebars</em>.
+						</p>
+
+						<h4>Footer Widgets</h4>
+						<p>Widgets placed into the <strong><em>Footer Widgets</em></strong> sidebar will be automatically displayed in the site footer. You can change the number of columns under <em>Appearance / Customize / Footer</em> with the <strong><em>Widget Columns</em></strong> option.</p>
+
+						<h4>Left and Right Sidebar Widgets</h4>
+						<p>You can assign left and right sidebar to any <strong>standard page</strong> using <strong><em>Left Sidebar</em></strong> and <strong><em>Right Sidebar</em></strong> options in <em>Sidebar Settings</em> metabox.</p>
+						<p><img src="content/sidebars-10.jpg" alt="">
+						<ol class="caption">
+							<li>Choose left and right sidebars</li>
+						</ol>
+						<p>But what if you want to assign a sidebar to a <strong>post archive or post detail</strong>? Since those are not standard pages, there is a different approach to this. Sidebars for posts are managed under <em>Appearance / Customize</em>. Every post type has its own customizer section - Standard Posts, Notices, Directory, Events, Galleries, Documents and People. Each of those sections contains <strong><em>Archive Left Sidebar</em></strong>, <strong><em>Archive Right Sidebar</em></strong>, <strong><em>Detail Left Sidebar</em></strong> and <strong><em>Detail Right Sidebar</em></strong> options to manage the post type's sidebars. Please note that this only apply to standard (blog) posts and LSVR post types.</p>
+
+					</section>
+					<!-- SIDEBARS & WIDGETS : end -->
+
+					<hr>
+
+					<!-- COLORS : begin -->
+					<section id="colors">
+
+						<h3>Colors</h3>
+
+						<p>Theme colors can be managed under <em>Appearance / Customize / Colors</em>. You can either choose from predefined color schemes, pick your custom colors or create your own color scheme. The difference between <em>Custom Colors</em> and <em>Custom Scheme</em> is that the latter is much more involved and requires some coding. On the other hand, it gives you more freedom and it is the <strong>recommended way for customizing theme's colors</strong>.</p>
+						<p>Since the <em>Predefined Scheme</em> and <em>Custom Colors</em> options should be pretty much self-explanatory, let's describe the process of <strong>creating your own custom color scheme</strong>.</p>
+						<ol>
+
+							<li>Open <em>http://<strong>yoursite.com</strong>/wp-content/themes/townpress/assets/sass/skins/default.scss</em> file. It should open directly in your browser, but some browsers may download it on your disk instead.<br>
+							If you are not able to access the file on your own installation, simply unpack the <em>townpress.zip</em> installation file (please see the <a href="#theme-installation">Theme Installation</a> chapter to learn how to obtain it) and you will find the <em>default.scss</em> file under <em>assets / sass / skins</em> folder.</li>
+
+							<li>Copy all the code from that file to any text editor. If your browser downloaded your file, open that file in the text editor. You can use for example <a href="https://notepad-plus-plus.org" target="_blank">Notepad++</a> for Windows or <a href="http://brackets.io" target="_blank">Brackets</a> for Mac, but any basic text editor (for example Windows Notepad) should do.</li>
+
+							<li>Make your changes. Basically you just need to change color variables at the top of the file. The most important one is <em>$accent1</em> variable on line 28. By default, it look like this:
+<pre>
+$accent1: #ec5237; // primary accent color
+</pre>
+							<p>There are many online tools where you can generate a hex code for your color, for example <a href="http://www.colorpicker.com" target="_blank">colorpicker.com</a>. Just change #xxxxxx to the hex code of your custom color (don't forget that it has to start with the # sign). Feel free to change values of other color variables in the file as well.</p></li>
+
+							<li>Once you've made your changes, copy the whole code and paste it to the SASS column on <a href="http://www.sassmeister.com" target="_blank">sassmeister.com</a> (or any other online SASS to CSS convertor). Please note that <strong>any typo in your syntax may lead to an error</strong>.</li>
+
+							<li>Copy the generated code from the CSS column.</li>
+
+							<li>Make sure the child theme is active under <em>Appearance / Themes</em>.</li>
+
+							<li>Go to <em>Appearance / Editor</em>, set <em>Select theme to edit:</em> to <strong><em>TownPress Child</em></strong> and paste your generated CSS after the "/* Add your custom css after this comment */" comment.
+								<p><img src="content/colors-10.jpg" alt="">
+								<ol class="caption">
+									<li>Make sure TownPress Child theme is selected</li>
+									<li>Select the stylesheet file</li>
+									<li>Put your CSS here and save your changes</li>
+								</ol>
+							</li>
+
+							<li>Next, repeat all the steps but now with the <strong>default editor color scheme file</strong> - <em>http://<strong>yoursite.com</strong>/wp-content/themes/townpress/assets/sass/skins/default.editor.scss</em>. Again, if you are not able to access it on your installation, unzip the <em>townpress.zip</em> file and you will find it under <em>assets / sass / skins</em> folder.</li>
+
+							<li><strong>There is one difference</strong> though, the final generated editor CSS code have to be pasted into <em>editor-style.css</em> file instead (which is also accessible under Appearance / Editor).</li>
+
+							<li>Last step: go to <em>Appearance / Customizer / Colors</em>, switch <strong><em>Set Colors By</em></strong> option to <strong><em>Custom Scheme</em></strong> and save.</li>
+
+						</ol>
+
+					</section>
+					<!-- COLORS : end -->
+
+					<hr>
+
+					<!-- TRANSLATION : begin -->
+					<section id="translation">
+
+						<h3>Translation</h3>
+
+						<p>If you are going to use this theme in any language other then English, you will need to translate it. The important part is that you need to translate the <strong>theme and all LSVR plugins</strong> you are using. Most of the translatable text is part of the admin area, so if you plan to translate only the front-end, there won't be that much text to translate.</p>
+						<p>There are <strong>two general approaches to translation</strong>. You can either use a <a href="https://wordpress.org/plugins/" target="_blank">3rd party plugin</a>, or do it the old-fashioned way via the <a href="https://poedit.net" target="_blank">Poedit</a> software (recommended). If you prefer the plugin approach, check out their respective documentations on how to do that. We will describe the manual process of translation via Poedit.</p>
+
+						<p>Before we begin, download and install <a href="https://poedit.net" target="_blank">Poedit</a> to your computer.</p>
+
+						<h4>Theme Translation</h4>
+						<ol>
+							<li>Make copy of the <strong><em>townpress.pot</em></strong> file from the theme's <em>languages</em> folder. You can either just unzip the <em>townpress.zip</em> file (<a href="#theme-installation">which you got from full package</a>) on your local computer and find the .pot file there, or you can use FTP to access your WP installation and copy the .pot file from the <em>wp-content/themes/townpress/languages</em> folder.</li>
+							<li>Paste the file anywhere on your computer and rename it to <strong><em>townpress-xx_YY.po</em></strong>. "xx" stands for your <a href="http://www.gnu.org/software/gettext/manual/html_chapter/gettext_16.html#Language-Codes">language code</a> and YY for <a href="http://www.gnu.org/software/gettext/manual/html_chapter/gettext_16.html#Country-Codes">country code</a> (for example "townpress-de_DE.po" for German). Notice how the file extension changed from ".pot" to ".po".</li>
+							<li>Open your .po file in Poedit, make your changes and save the file. This will create a new file - <strong><em>townpress-xx_YY.mo</em></strong>.</li>
+							<li>Copy both <strong><em>townpress-xx_YY.po</em></strong> and <strong><em>townpress-xx_YY.mo</em></strong> to your WP installation under <em>wp-content/languages/themes</em> and that's it.</li>
+						</ol>
+
+						<h4>Plugins Translation</h4>
+						<p>The whole process is very similar to theme translation, you just need to do it separately for each plugin. Let's translate the <strong>LSVR Events</strong> plugin for example (but it is the same for all LSVR plugins).</p>
+						<ol>
+							<li>Make copy of the <strong><em>lsvr-events.pot</em></strong> file from the LSVR Events plugin <em>languages</em> folder. You can either just unzip the <em>lsvr-events.zip</em> file from the <em>Plugins</em> folder (<a href="#theme-installation">which you can find in full package</a>) on your local computer and find the .pot file there, or you can use FTP to access your WP installation and copy the .pot file from <em>wp-content/plugins/lsvr-events/languages</em> folder.</li>
+							<li>Paste the file anywhere on your computer and rename it to <strong><em>lsvr-events-xx_YY.po</em></strong>. "xx" stands for your <a href="http://www.gnu.org/software/gettext/manual/html_chapter/gettext_16.html#Language-Codes">language code</a> and YY for <a href="http://www.gnu.org/software/gettext/manual/html_chapter/gettext_16.html#Country-Codes">country code</a> (for example "lsvr-events-de_DE.po" for German). Notice how the file extension changed from ".pot" to ".po".</li>
+							<li>Open your .po file in Poedit, make your changes and save the file. This will create a new file - <strong><em>lsvr-events-xx_YY.mo</em></strong>.</li>
+							<li>Copy both <strong><em>lsvr-events-xx_YY.po</em></strong> and <strong><em>lsvr-events-xx_YY.mo</em></strong> to your WP installation under <em>wp-content/languages/plugins</em> and that's it.</li>
+						</ol>
+
+		            	<div class="c-alert-message">
+		            		<p>Make sure that your site language under <em>Settings / General</em> is set to the correct language.</p>
+		            	</div>
+
+					</section>
+					<!-- TRANSLATION : end -->
+
+					<hr>
+
+					<!-- ICONS : begin -->
+					<section id="icons">
+
+						<h3>Icons</h3>
+
+						<p><strong><a href="content/icons/index.html" target="_blank">Check out the list of all built-in icons here</a></strong>.</p>
+						<p>If you want to add an icon into your content, use the <a href="#shortcode-lsvr_icon">[lsvr_icon]</a> shortcode (LSVR Elements plugin is required for this shortcode to work).</p>
+						<p>More icons can be added via <a href="https://wordpress.org/plugins/search/font+awesome/">3rd party plugins</a>.</p>
+
+					</section>
+					<!-- ICONS : end -->
+
+					<hr>
+
+					<!-- CODE CUSTOMIZATION : begin -->
+					<section id="code-customization">
+
+						<h3>Code Customization</h3>
+
+		            	<div class="c-alert-message">
+		            		<p>Any code customization has to be done <strong>via a child theme.</strong> Do <strong>not</strong> edit the parent theme files!</p>
+		            	</div>
+
+						<p>Code custimization is a broad topic which goes far beyond the scope of this documentation. The best place to start learning about the developer side of the WordPress is the <a href="https://codex.wordpress.org">WordPress Codex</a>.
+						Most of the knowledge needed to customize the theme is not theme-specific and can be applied to any theme. There are however some specifics which can come handy when you decide to customize this particular theme.</p>
+
+						<p>99% of the frontend code of this theme can be customized very easily <strong>by overriding the specific template files via a child theme</strong>. Apart from the basic WordPress theme files like header.php, footer.php, etc (you can read more about WordPress template hierarchy on the <a href="https://developer.wordpress.org/themes/basics/template-hierarchy/" target="_blank">WordPress Codex</a>), you will find many theme-specific templates inside <strong><em>template-parts</em></strong> folder. Just copy any of those files <strong>to your child theme</strong> (preserve the relative path) and edit them there.</p>
+
+						<p>However, the code for widgets, shortcodes and blocks is not present in the theme folder. Code for all those elements resides <strong>in plugins</strong>. The good news is that frontend code of those elements is created using template files as well.
+						You just need to find out which plugin contains the widget/shortcode you want to edit and copy its template file to your child theme under the correct folder using this formula:</p>
+						<p>For widgets:<br>
+						<code>[plugin-folder-name]/templates/widgets/[widget-template-file]</code>
+						</p>
+
+						<p>For shortcodes (and blocks):<br>
+						<code>[plugin-folder-name]/templates/shortcodes/[shortcode-template-file]</code>
+						</p>
+
+						<p>For example, if you want to override the code for the LSVR Featured Post widget, open <em>wp-content/plugins/lsvr-elements/templates/widgets</em> folder and copy <em>post-featured.php</em> file <strong>into your child theme folder</strong> under <em>lsvr-elements/templates/widgets</em> folder.
+
+					</section>
+					<!-- CODE CUSTOMIZATION : end -->
+
+				</section>
+				<!-- CUSTOMIZATION : end -->
+
+				<hr>
+
+				<!-- HOW TO : begin -->
+				<section id="how-to">
+
+					<h2>How To</h2>
+
+
+					<!-- DISPLAY OLD EVENTS : begin -->
+					<section id="how-to-display-old-events">
+
+						<h3>Display Old Events</h3>
+
+						<p>To display events within a specific date range use URL like this:<br><strong>yoursite.com</strong>/events/?date_from=2018-08-01&amp;date_to=2018-12-31</p>
+
+						<p>To display all past events, use the URL like this:<br><strong>yoursite.com</strong>/events/?period=past&amp;order=desc</p>
+
+					</section>
+					<!-- DISPLAY OLD EVENTS : end -->
+
+					<hr>
+
+					<!-- UPDATE THEME : begin -->
+					<section id="how-to-update-theme">
+
+						<h3>How To Update The Theme</h3>
+
+						<p>The easiest way to update the theme is to use <a href="https://envato.com/market-plugin/" target="_blank">Envato Market</a> plugin.</p>
+						<p>Alternatively, you can download the installable <strong><em>townpress.zip</em></strong> file from your <em>ThemeForest account / Downloads</em> and then either unzip it and upload it under <em>wp-content / themes</em> via FTP (overwrite the existing <em>townpress</em> folder), or upload the file via admin under <em>Appearance / Themes / Add New / Upload Theme</em> (you will have to deactivate and remove your current version of the theme first).</p>
+
+		            	<div class="c-alert-message">
+		            		<p>You should update the parent theme only. <strong>The child theme is NOT supposed to be updated</strong>.</p>
+		            	</div>
+
+					</section>
+					<!-- UPDATE THEME : end -->
+
+					<hr>
+
+					<!-- UPDATE PLUGINS : begin -->
+					<section id="how-to-update-plugins">
+
+						<h3>How To Update Bundled Plugins</h3>
+
+						<p>Once you've <a href="#how-to-update-theme">updated the theme</a> you should see an admin notification which will lead you through the process of updating the bundled plugins (if there are any which needs updating).</p>
+
+						<p>Alternatively, you can download the complete theme package from your <em>ThemeForest account / Downloads</em>, unzip it and check out the <em>changelog.txt</em> file to see which plugins were updated in the recent version. You will find all installable plugin files in the <em>Plugins</em> folder. Now, either unzip each plugin file you want to update and upload them under <em>wp-content / plugins</em> via FTP (overwrite the existing folders), or upload each .zip file via admin under <em>Plugins / Add New / Upload Plugin</em> (you will have to deactivate and remove your current versions of those plugins first).</p>
+
+					</section>
+					<!-- UPDATE PLUGINS : end -->
+
+					<hr>
+
+					<!-- EXCERPT : begin -->
+					<section id="how-to-add-excerpt">
+
+						<h3>How To Add Post Excerpt</h3>
+
+						<p>Excerpt is a short text which can be displayed on post archive pages or in some widgets instead of the full post content. You can add excerpt for standard posts and some custom post types.</p>
+						<p>If you are using the <strong>WordPress block editor</strong> (Gutenberg), you can add excerpt in the right panel when editing a post (make sure you are switched to <em>Document</em> tab at the top of the panel). If you are not seeing the <em>Excerpt</em> field, click on "dots" icon in upper right corner to enable the field.</p>
+						<p>If you are NOT using the block editor (for example when you are using the Classic Editor plugin), then while editing a post, click on <em>Screen Options</em> in upper right corner, check <em>Excerpt</em> and scroll down to see the <em>Excerpt</em> field under the editor.</p>
+
+					</section>
+					<!-- EXCERPT : end -->
+
+					<hr>
+
+					<!-- CONTACT FORM : begin -->
+					<section id="how-to-setup-contact-form">
+
+						<h3>How To Setup Contact Form</h3>
+
+						<p>To add a contact form similar to one seen in the demo site, first install and activate the <a href="https://wordpress.org/plugins/contact-form-7/" target="_blank">Contact Form 7</a> plugin. Then download and unzip the full theme package from your <em>ThemeForest account / Downloads</em> (if you haven't already) and upload the <strong><em>cf7-contact-form.xml</em></strong> file from the <em>Demo Data</em> folder under <em>Tools / Import / WordPress</em> in your admin (you may be prompted to install the additional plugin during the process). Please follow the <a href="https://contactform7.com/docs/" target="_blank">official documentation</a> on how to properly configure the plugin.</p>
+
+					</section>
+					<!-- CONTACT FORM : end -->
+
+					<hr>
+
+					<!-- FORUM : begin -->
+					<section id="how-to-setup-forum">
+
+						<h3>How To Setup Forum</h3>
+
+						<p>The forum seen on the demo site was created using the <a href="https://wordpress.org/plugins/bbpress/" target="_blank">bbPress plugin</a>. Please follow the <a href="https://codex.bbpress.org" target="_blank">official documentation</a> to learn how to configure it. You can download the dummy data <a href="https://bbpress.trac.wordpress.org/attachment/ticket/2516/bbpress-unit-test-data.xml" target="_blank">here</a>.</p>
+
+					</section>
+					<!-- FORUM : end -->
+
+					<hr>
+
+					<!-- REORDER POSTS : begin -->
+					<section id="how-to-reorder-posts-and-categories">
+
+						<h3>How To Reorder Posts and Categories</h3>
+
+						<p>The easiest way to do it is to use <a href="https://wordpress.org/plugins/intuitive-custom-post-order/" target="_blank">Intuitive Custom Post Order</a> plugin. Once instaled and activated, head to <em>Settings / Intuitive CPO</em> and check which post types and taxonomies you want to enable this functionality for. After that, you will be able to reorder them via simple drag &amp; drop in your admin.</p>
+
+					</section>
+					<!-- REORDER POSTS : end -->
+
+				</section>
+				<!-- HOW TO : end -->
+
+				<hr>
+
+				<!-- ELEMENTS : begin -->
+				<section id="elements">
+
+					<h2>Elements</h2>
+
+					<p>Following elements are used primarily to build the front page. If you are in a need of some basic design elements like accordions or tabs, search the <a href="https://wordpress.org/plugins/">official WordPress plugins repository</a> for some additional 3rd party plugins.</p>
+
+					<div class="c-alert-message">
+						<p>Almost all TownPress elements are <strong>available as blocks in WordPress block editor</strong> (Gutenberg), which means that if you are using the editor, feel free to ignore this chapter since the editor allows you to add those elements in a much more user friendly way. These classic shortcodes may be handy in some special use case scenarios though. The <strong>LSVR TownPress Theme Toolkit</strong> and <strong>LSVR Elements</strong> plugins are required for these elements to work.</p>
+					</div>
+
+					<!-- POSTS : begin -->
+					<section id="shortcode-lsvr_townpress_posts">
+
+						<h3>TownPress Posts</h3>
+						<p>This shortcode displays standard (blog) posts.</p>
+<pre>
+[lsvr_townpress_posts
+title="Latest News"
+icon="icon-reading"
+category="123"
+limit="8"
+featured_limit="1"
+more_label="More News"
+id="my_unique_id"]
+</pre>
+						<dl>
+							<dt>title</dt>
+							<dd>Element title.</dd>
+							<dt>icon</dt>
+							<dd>Element icon. Check out the <a href="#icons">list of icons</a>.</dd>
+							<dt>category</dt>
+							<dd>Category ID or slug to pull posts from.</dd>
+							<dt>limit</dt>
+							<dd>Number of posts to display.</dd>
+							<dt>featured_limit</dt>
+							<dd>How many posts will be displayed as featured - with excerpt and featured image.</dd>
+							<dt>more_label</dt>
+							<dd>Label for a "More" link which links to a post / category archive.</dd>
+							<dt>id</dt>
+							<dd>Unique ID which can be used for applying custom CSS to this element.</dd>
+						</dl>
+
+					</section>
+					<!-- POSTS : end -->
+
+					<hr>
+
+					<!-- POST SLIDER : begin -->
+					<section id="shortcode-lsvr_townpress_post_slider">
+
+						<h3>TownPress Post Slider</h3>
+						<p>This shortcode displays standard (blog) posts as a slider.</p>
+<pre>
+[lsvr_townpress_post_slider
+category="123"
+limit="8"
+align="left"
+show_excerpt="true"
+autoplay="5"
+overlay_opacity="90"
+id="my_unique_id"]
+</pre>
+						<dl>
+							<dt>category</dt>
+							<dd>Category ID or slug to pull posts from.</dd>
+							<dt>limit</dt>
+							<dd>Number of posts to display.</dd>
+							<dt>align</dt>
+							<dd>Alignment of slide content.</dd>
+							<dt>show_excerpt</dt>
+							<dd>Display post excerpt.</dd>
+							<dt>autoplay</dt>
+							<dd>Time between slide change in seconds. Set to 0 to disable autoplay.</dd>
+							<dt>overlay_opacity</dt>
+							<dd>Opacity of overlay element. Set to 0 to make it completely transparent.</dd>
+							<dt>id</dt>
+							<dd>Unique ID which can be used for applying custom CSS to this element.</dd>
+						</dl>
+
+					</section>
+					<!-- POST SLIDER : end -->
+
+					<hr>
+
+					<!-- SIDEBAR : begin -->
+					<section id="shortcode-lsvr_townpress_sidebar">
+
+						<h3>TownPress Sidebar</h3>
+						<p>This shortcode displays a sidebar. Sidebars can be managed under <em>Appearance / Widgets</em>.</p>
+<pre>
+[lsvr_townpress_sidebar
+sidebar_id="123"
+columns_count="4"
+id="my_unique_id"]
+</pre>
+						<dl>
+							<dt>sidebar_id</dt>
+							<dd>ID of the sidebar which will be used. It is <em>lsvr-townpress-default-sidebar-left</em> for the <strong><em>Default Left Sidebar</em></strong>, <em>lsvr-townpress-default-sidebar-right</em> for the <strong><em>Default Right Sidebar</em></strong> and <em>lsvr-townpress-footer-widgets</em> for <strong><em>Footer Widgets</em></strong>. For <strong>custom sidebars</strong> it is <em>lsvr-townpress-custom-sidebar-X</em> where X stands for the sidebar number. You will get this custom sidebar number by visiting <em>Appearance / Customizer / Custom Sidebars</em> and mousing over the "sidebar remove" button for a few seconds. Omit the # sign, so the final custom sidebar ID should look like <em>lsvr-townpress-custom-sidebar-3</em> for example.</dd>
+							<dt>columns_count</dt>
+							<dd>How many columns will be used to divide widgets.</dd>
+							<dt>id</dt>
+							<dd>Unique ID which can be used for applying custom CSS to this element.</dd>
+						</dl>
+
+					</section>
+					<!-- SIDEBAR : end -->
+
+					<hr>
+
+					<!-- SITEMAP : begin -->
+					<section id="shortcode-lsvr_townpress_sitemap">
+
+						<h3>TownPress Sitemap</h3>
+						<p>This shortcode displays a custom menu. Menu can be created under the <em>Appearance / Menus</em>.</p>
+<pre>
+[lsvr_townpress_sitemap
+menu_id="123"
+columns_count="4"
+id="my_unique_id"]
+</pre>
+						<dl>
+							<dt>menu_id</dt>
+							<dd>ID of the menu which will be used. To get the menu ID, head to <em>Appearance / Menus</em>, switch to your menu and copy the value of the "menu" attribute from the page URL</dd>
+							<dt>columns_count</dt>
+							<dd>How many columns will be used to divide the sitemap.</dd>
+							<dt>id</dt>
+							<dd>Unique ID which can be used for applying custom CSS to this element.</dd>
+						</dl>
+
+					</section>
+					<!-- SITEMAP : end -->
+
+					<hr>
+
+					<!-- ICON : begin -->
+					<section id="shortcode-lsvr_icon">
+
+						<h3>Icon</h3>
+						<p>This shortcode displays a simple icon.</p>
+<pre>
+[lsvr_icon
+icon="icon-check"
+id="my_unique_id"]
+</pre>
+						<dl>
+							<dt>icon</dt>
+							<dd>Icon to display. Check out the <a href="#icons">list of icons</a>.</dd>
+							<dt>id</dt>
+							<dd>Unique ID which can be used for applying custom CSS to this element.</dd>
+						</dl>
+
+					</section>
+					<!-- ICON : end -->
+
+				</section>
+				<!-- ELEMENTS : end -->
+
+				<hr>
+
+				<!-- OLD VERSION : begin -->
+				<section id="townpressv1">
+
+					<h2>TownPress 1.x</h2>
+
+					<p>Please note that <strong>TownPress 1.x and 2.x+ are NOT compatible</strong>. If you want to update your existing site which runs version 1.x to version 2.x+, you will have to basically configure the whole site from the scratch. That applies to theme options, menus, widgets, any custom theme's elements or shortcodes, but most importantly to custom posts (events, documents, galleries, notices).</p>
+
+					<p>Redux Framework and and LSVR Toolkit (TownPress) plugins are no longer supported in 2.x+, so if you decide to update to 2.x+, feel free to remove those plugins.</p>
+
+					<p>You can find the latest version of TownPress 1.x in the full package in "Legacy / TownPress v1" folder.</p>
+
+					<p><a href="v1/index.html">TownPress 1.x documentation</a></p>
+
+				</section>
+				<!-- OLD VERSION : end -->
+
+			</div>
+		</div>
+		<!-- CORE : end -->
+
+	</div>
+	<!-- WRAPPER : end -->
+
+    </body>
+</html>

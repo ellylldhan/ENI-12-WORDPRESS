@@ -1,0 +1,1 @@
+This folder contains installable .zip file and full package of 1.x version of TownPress. These files are only meant as a backup for users running 1.x version who don't want to, or can't update to TownPress 2.x. If you are a new user, please ignore this folder and install the 2.x version from the THEME folder.
