@@ -1,1 +1,0 @@
-Demo data in this folder were created using the WPBakery Page Builder. Import only if you want to use this plugin instead of the Gutenberg (WordPress 5.0 native content editor).
