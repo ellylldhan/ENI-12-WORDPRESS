@@ -1,0 +1,1844 @@
+v3.3.3
+
+Fixed pagination issues on event archive page when using specific URL params.
+
+LSVR Posts widget can now display posts with specific tags.
+
+Fixed issues with document archive page when using excluded categories feature.
+
+Fixed issue with LSVR Documents widget when using the excluded categories feature.
+
+LSVR Document Categories widget now won't display excluded categories.
+
+Updated LSVR Documents plugin to 1.7.1
+
+Updated LSVR Elements plugin to 1.4.2
+
+Updated WPBakery Page Builder plugin to 6.2.0 (learn how to update it https://themeforest.net/item/townpress-municipality-wordpress-theme/11490395/faqs/32829)
+
+Various small fixes
+
+Changed core files:
+style.css, assets, inc/lsvr-events/lsvr-events.php, inc/lsvr-documents/actions.php, inc/tgm-settings.php, inc/plugins/lsvr-elements.zip
+
+Changed template files:
+template-parts/archive-categories.php
+
+------------------------------
+
+v3.3.2
+
+Added option to center the logo (go to Appearance / Customize / Header and enable "Center Logo").
+
+Person post Role field can now contain some basic HTML.
+
+Added wp_body_open hook to improve compatibility with some 3rd party plugins.
+
+The WordPress 5.2 is now the minimum supported version. Please update your WordPress installation if you are using the older version before you update the theme.
+
+Updated LSVR Framework plugin to 1.6.3
+
+Updated LSVR People plugin to 1.8.1
+
+Various small fixes
+
+Changed core files:
+style.css, assets, languages, inc/lsvr-people/frontend-functions.php, inc/customizer-config.php, inc/frontend-functions.php, inc/tgm-settings.php, inc/plugins/lsvr-framework.zip, inc/plugins/lsvr-people.zip
+
+Changed template files:
+header.php
+
+------------------------------
+
+v3.3.1
+
+Fixed issue with maps on HTTPS sites when using Open Street Map map provider
+
+Changed core files:
+style.css, assets
+
+------------------------------
+
+v3.3.0
+
+Added support for alternative map providers for built-in directory maps, event location maps and header map. You can choose a provider under Appearance / Customize / Map Settings.
+
+Appearance / Customize / Google Maps was changed to Appearance / Customize / Map Settings
+
+If you are currently using the built-in maps functionality (in header, directory or events), go to Appearance / Customize / Map Settings and set Maps Provider option to "Google Maps" (or feel free to switch to a different provider).
+
+Updated LSVR 3rd Party Toolkit plugin to 1.0.1
+
+Updated LSVR Directory plugin to 1.8.0
+
+Updated LSVR Events plugin to 1.8.0
+
+Updated LSVR Framework plugin to 1.6.2
+
+Updated documentation
+
+Various small fixes
+
+Changed core files:
+style.css, assets, inc/actions.php, inc/actions.php, inc/geocode-header-map.php, inc/core-functions.php, inc/customizer-config.php, inc/lsvr-directory/actions.php, inc/lsvr-directory/ajax-directory-map.php, inc/lsvr-directory/customizer-config.php, inc/lsvr-events/actions.php, inc/lsvr-events/customizer-config.php, inc/tgm-settings.php, inc/plugins/lsvr-3rd-party-toolkit.zip, inc/plugins/lsvr-directory.zip, inc/plugins/lsvr-events.zip, inc/plugins/lsvr-framework.zip
+
+Changed template files:
+template-parts/header/map.php
+template-parts/lsvr_event/single-map.php
+template-parts/lsvr_listing/archive-map.php
+template-parts/lsvr_listing/single-map.php
+
+------------------------------
+
+v3.2.1
+
+Fixed issues with several LSVR widgets and shortcodes
+
+Updated LSVR Elements plugin to 1.4.1
+
+Updated LSVR Notices plugin to 1.6.1
+
+Updated LSVR TownPress Toolkit plugin to 1.5.1
+
+Changed template files:
+template-parts/main-end.php
+
+Changed core files:
+style.css, assets, inc/tgm-settings.php, inc/plugins/lsvr-townpress-toolkit.zip, inc/plugins/lsvr-elements.zip, inc/plugins/lsvr-notices.zip
+
+------------------------------
+
+v3.2.0
+
+You can now define a title for external document attachments
+
+All LSVR widgets and shortcodes now support templates, which means you can easily override their frontend code via a child theme. Simply copy the original widget/shortcode template file to your child theme and edit its code there. Each template has to be saved under a correct folder in your child theme folder.
+
+For widgets:
+[plugin-folder-name]/templates/widgets/[widget-template-file]
+
+For shortcodes:
+[plugin-folder-name]/templates/shortcodes/[shortcode-template-file]
+
+For example, if you want to override code for the LSVR Featured Post widget, open wp-content/plugins/lsvr-elements/templates/widgets folder and copy post-featured.php file into your child theme folder under lsvr-elements/templates/widgets folder.
+
+Updated LSVR Directory plugin to 1.7.0
+
+Updated LSVR Documents plugin to 1.7.0
+
+Updated LSVR Elements plugin to 1.4.0
+
+Updated LSVR Events plugin to 1.7.0
+
+Updated LSVR Framework plugin to 1.6.1
+
+Updated LSVR Galleries plugin to 1.7.0
+
+Updated LSVR Notices plugin to 1.6.0
+
+Updated LSVR People plugin to 1.8.0
+
+Updated LSVR TownPress Toolkit plugin to 1.5.0
+
+Various small fixes
+
+Updated documentation
+
+Changed core files:
+style.css, assets, inc/actions.php, inc/classes/lsvr-townpress-header-mobile-menu-walker.php, inc/lsvr-documents/classes/lsvr-townpress-document-categorized-attachments.php, inc/tgm-settings.php, inc/plugins/lsvr-directory.zip, inc/plugins/lsvr-documents.zip, inc/plugins/lsvr-elements.zip, inc/plugins/lsvr-events.zip, inc/plugins/lsvr-framework.zip, inc/plugins/lsvr-galleries.zip, inc/plugins/lsvr-notices.zip, inc/plugins/lsvr-people.zip, inc/plugins/lsvr-townpress-toolkit.zip
+
+Changed template files:
+searchform.php
+template-parts/archive-post-footer.php
+template-parts/single-post-footer.php
+template-parts/footer/social-links.php
+template-parts/header/login.php
+template-parts/header/map-toggle-mobile.php
+template-parts/header/map-toggle.php
+template-parts/header/map.php
+template-parts/header/toolbar-toggle.php
+template-parts/lsvr_document/archive-categorized-attachments.php
+template-parts/lsvr_document/attachments.php
+template-parts/lsvr_event/archive-post-info.php
+template-parts/lsvr_event/single-address.php
+template-parts/lsvr_event/single-date.php
+template-parts/lsvr_gallery/archive-post-info.php
+template-parts/lsvr_listing/archive-post-info.php
+template-parts/lsvr_listing/single-contact-info.php
+template-parts/lsvr_listing/single-social-links.php
+template-parts/lsvr_person/contact-info.php
+template-parts/lsvr_person/social-links.php
+
+------------------------------
+
+v3.1.4
+
+Updated LSVR TownPress Theme Toolkit plugin to 1.4.4
+
+Updated Envato Market plugin to 2.0.3
+
+Updated LSVR Framework plugin to 1.5.2
+
+Updated WPBakery Page Builder plugin to 6.1 (learn how to update it https://themeforest.net/item/townpress-municipality-wordpress-theme/11490395/faqs/32829)
+
+Various small fixes
+
+Changed core files:
+style.css, assets, inc/tgm-settings.php, inc/plugins/lsvr-framework.zip, inc/plugins/lsvr-townpress-toolkit.zip, inc/plugins/envato-market.zip
+
+------------------------------
+
+v3.1.3
+
+Fixed block editor issue in WordPress 5.3
+
+Fixed issue with missing bbPress posts from search results
+
+Updated LSVR Framework plugin to 1.5.1
+
+Various small fixes
+
+Changed core files:
+style.css, assets, languages, inc/editor-custom-colors-template.php, inc/bbpress/actions.php, inc/tgm-settings.php, inc/plugins/lsvr-framework.zip
+
+Changed template files:
+template-parts/footer/social-links.php
+
+------------------------------
+
+v3.1.2
+
+Fixed bug with blank category description box for categories without description on default archive pages
+
+Changed core files:
+style.css
+
+Changed template files:
+template-parts/archive-category-description.php
+
+------------------------------
+
+v3.1.1
+
+Updated LSVR TownPress Toolkit plugin to 1.4.3
+
+Various small fixes
+
+Changed core files:
+style.css, assets/js/townpress-scripts.js, assets/js/townpress-scripts.min.js, inc/actions.php, inc/tgm-settings.php, inc/plugins/lsvr-townpress-toolkit.zip
+
+------------------------------
+
+v3.1.0
+
+Fixed issues with menus on mobile devices
+
+Added option to set the URL for the header login button (under Appearance / Customize / Header)
+
+Changed the location of some CSS and SASS files
+
+Updated child theme. To update your existing child theme, open wp-content/themes/townpress-child/functions.php (alternatively, you can access this file directly via admin under Appearance / Editor) and replace the line 22 with this code:
+
+wp_enqueue_style( 'lsvr-townpresss-child-style', get_stylesheet_directory_uri() . '/style.css', array( 'lsvr-townpresss-general-style' ), $child_version );
+
+If you are running the RTL version, replace also line 26 with the following code:
+
+wp_enqueue_style( 'lsvr-townpresss-rtl-style', get_template_directory_uri() . '/rtl.css', array( 'lsvr-townpresss-general-style' ), $parent_version );
+
+Updated LSVR People plugin to 1.7.1
+
+Updated LSVR Galleries plugin to 1.6.2
+
+Updated LSVR TownPress Toolkit plugin to 1.4.2
+
+Various small fixes
+
+Changed core files:
+style.css, functions.php, assets, languages, inc/actions.php, inc/customizer-config.php, inc/frontend-functions.php, inc/lsvr-events/lsvr-events.php, inc/tgm-settings.php, inc/plugins/lsvr-galleries.zip, inc/plugins/lsvr-people.zip, inc/plugins/lsvr-townpress-toolkit.zip
+
+Changed template files:
+search.php
+template-parts/accessibility-links.php
+template-parts/header/login.php
+template-parts/lsvr_event/single-map.php
+
+------------------------------
+
+v3.0.0
+
+IMPORTANT: this update contains a lot of changes to the various template files. If you are overriding any of the theme template files via a child theme, please see the complete changelog (http://assets.lsvr.sk/townpress.wp/changelog.txt) and update your child theme templates accordingly.
+
+Many functions were converted to template files to make code customization via child theme easier. List of all deprecated functions can be found in complete changelog (http://assets.lsvr.sk/townpress.wp/changelog.txt).
+
+Improved accessibility for screen readers
+
+Added option to display standard post and notice categories at the top of the post archive.
+
+Some sections under Appearance / Customize were rearranged to improve clarity. 
+
+Added custom fields for directory listing contact info and social links.
+
+Various small fixes
+
+Updated LSVR Directory plugin to 1.6.0
+
+Updated LSVR Documents plugin to 1.6.1
+
+Updated LSVR Elements plugin to 1.3.2
+
+Updated LSVR Events plugin to 1.6.1
+
+Updated LSVR Galleries plugin to 1.6.1
+
+Updated LSVR People plugin to 1.7.0
+
+Updated LSVR TownPress Toolkit plugin to 1.4.1
+
+Updated WPBakery Page Builder plugin to 6.0.5 (learn how to update it https://themeforest.net/item/townpress-municipality-wordpress-theme/11490395/faqs/32829)
+
+Changed core files:
+style.css, style.scss, languages, functions.php, assets/css/skins, assets/js/townpress-scripts.js, assets/js/townpress-scripts.min.js, inc/actions.php, inc/core-functions.php, inc/customizer-config.php, inc/custom-colors-template.php, inc/frontend-functions.php, inc/classes/lsvr-townpress-header-menu-walker.php, inc/lsvr-documents/actions.php, inc/lsvr-documents/customizer-config.php, inc/lsvr-documents/lsvr_documents.php, inc/lsvr-directory/actions.php, inc/lsvr-directory/customizer-config.php, inc/lsvr-directory/frontend-functions.php, inc/lsvr-directory/lsvr-directory.php, inc/lsvr-events/actions.php, inc/lsvr-events/frontend-functions.php, inc/lsvr-events/customizer-config.php, inc/lsvr-events/lsvr-events.php, inc/lsvr-galleries/actions.php, inc/lsvr-galleries/lsvr-galleries.php, inc/lsvr-galleries/customizer-config.php, inc/lsvr-notices/actions.php, inc/lsvr-notices/customizer-config.php, inc/lsvr-notices/lsvr-notices.php, inc/lsvr-people/actions.php, inc/lsvr-people/customizer-config.php, inc/lsvr-people/lsvr-people.php, inc/tgm-settings.php, inc/plugins/lsvr-directory.zip, inc/plugins/lsvr-documents.zip, inc/plugins/lsvr-elements.zip, inc/plugins/lsvr-events.zip, inc/plugins/lsvr-galleries.zip, inc/plugins/lsvr-people.zip, inc/plugins/lsvr-townpress-toolkit.zip
+
+New core files:
+inc/deprecated.php, inc/lsvr-directory/deprecated.php, inc/lsvr-documents/deprecated.php, inc/lsvr-events/deprecated.php, inc/lsvr-galleries/deprecated.php, inc/lsvr-notices/deprecated.php, inc/lsvr-people/deprecated.php
+
+Removed core files:
+inc/lsvr_documents/frontend-functions.php
+
+Deprecated core functions:
+lsvr_townpress_get_page_sidebar_left_id
+lsvr_townpress_get_page_sidebar_right_id
+lsvr_townpress_has_breadcrumbs
+lsvr_townpress_has_header_login
+lsvr_townpress_has_header_map
+lsvr_townpress_has_header_search
+lsvr_townpress_has_languages
+lsvr_townpress_has_listing_single_featured_image
+lsvr_townpress_has_navbar
+lsvr_townpress_has_page_sidebar_left
+lsvr_townpress_has_page_sidebar_right
+lsvr_townpress_get_breadcrumbs
+lsvr_townpress_get_document_archive_layout
+lsvr_townpress_get_event_archive_layout
+lsvr_townpress_get_gallery_archive_layout
+lsvr_townpress_get_listing_archive_layout
+lsvr_townpress_get_notice_archive_layout
+lsvr_townpress_get_person_archive_layout
+lsvr_townpress_the_blog_post_thumbnail
+lsvr_townpress_the_document_attachments
+lsvr_townpress_the_document_categorized_attachments
+lsvr_townpress_the_event_archive_categories
+lsvr_townpress_the_event_archive_pagination
+lsvr_townpress_the_event_location_map
+lsvr_townpress_the_event_post_archive_thumbnail
+lsvr_townpress_the_event_post_archive_background_thumbnail
+lsvr_townpress_the_event_post_archive_timeline_thumbnail
+lsvr_townpress_the_event_upcoming_occurrences
+lsvr_townpress_the_header_background
+lsvr_townpress_the_header_languages
+lsvr_townpress_the_header_login
+lsvr_townpress_the_header_map
+lsvr_townpress_the_header_map_toggle
+lsvr_townpress_the_header_search
+lsvr_townpress_the_header_toolbar_toggle
+lsvr_townpress_the_listing_archive_map
+lsvr_townpress_the_listing_archive_thumbnail
+lsvr_townpress_the_listing_contact_info
+lsvr_townpress_the_listing_map
+lsvr_townpress_the_listing_opening_hours
+lsvr_townpress_the_listing_gallery
+lsvr_townpress_the_listing_post_archive_background_thumbnail
+lsvr_townpress_the_listing_social_links
+lsvr_townpress_the_post_archive_categories
+
+Changed template files:
+bbpress.php
+archive-lsvr_document.php
+archive-lsvr_event.php
+archive-lsvr_gallery.php
+archive-lsvr_listing.php
+archive-lsvr_notice.php
+archive-lsvr_person.php
+header.php
+index.php
+page.php
+search.php
+searchform.php
+sidebar.php
+sidebar-right.php
+single.php
+single-lsvr_document.php
+single-lsvr_event.php
+single-lsvr_gallery.php
+single-lsvr_listing.php
+single-lsvr_notice.php
+single-lsvr_person.php
+page-templates/boxed-without-title.php
+page-templates/not-boxed-without-title.php
+page-templates/not-boxed.php
+template-parts/breadcrumbs.php
+template-parts/main-begin.php
+template-parts/main-end.php
+template-parts/blog/archive-layout-default.php
+template-parts/header/branding.php
+template-parts/header/navbar.php
+template-parts/header/toolbar.php
+template-parts/lsvr_document/archive-layout-default.php
+template-parts/lsvr_document/archive-layout-categorized-attachments.php
+template-parts/lsvr_event/archive-layout-default.php
+template-parts/lsvr_notice/archive-layout-default.php
+template-parts/lsvr_listing/archive-layout-default.php
+template-parts/lsvr_person/archive-layout-default.php
+
+New template files:
+template-parts/accessibility-links.php
+template-parts/archive-categories.php
+template-parts/archive-category-description.php
+template-parts/archive-post-footer.php
+template-parts/archive-post-thumbnail.php
+template-parts/archive-lsvr_document.php
+template-parts/main-header.php
+template-parts/page-content.php
+template-parts/page-content-boxed.php
+template-parts/single-post-content.php
+template-parts/footer/menu.php
+template-parts/header/background.php
+template-parts/header/languages.php
+template-parts/header/login.php
+template-parts/header/map.php
+template-parts/header/map-toggle.php
+template-parts/header/map-toggle-mobile.php
+template-parts/header/mobile-menu.php
+template-parts/header/search.php
+template-parts/header/toolbar-toggle.php
+template-parts/lsvr_document/attachments.php
+template-parts/lsvr_document/archive-categorized-attachments.php
+template-parts/lsvr_event/archive-pagination.php
+template-parts/lsvr_event/archive-post-info.php
+template-parts/lsvr_event/archive-post-thumbnail.php
+template-parts/lsvr_event/single-address.php
+template-parts/lsvr_event/single-date.php
+template-parts/lsvr_event/single-info.php
+template-parts/lsvr_event/single-map.php
+template-parts/lsvr_event/single-upcoming-occurrences.php
+template-parts/lsvr_gallery/archive-layout-default.php
+template-parts/lsvr_gallery/archive-post-info.php
+template-parts/lsvr_listing/archive-map.php
+template-parts/lsvr_listing/archive-post-info.php
+template-parts/lsvr_listing/single-contact-info.php
+template-parts/lsvr_listing/single-gallery.php
+template-parts/lsvr_listing/single-map.php
+template-parts/lsvr_listing/single-opening-hours.php
+template-parts/lsvr_listing/single-social-links.php
+
+Removed template files:
+template-parts/blog/archive-header.php
+template-parts/lsvr_document/archive-header.php
+template-parts/lsvr_event/archive-header.php
+template-parts/lsvr_gallery/archive-header.php
+template-parts/lsvr_gallery/archive-layout-photogrid.php
+template-parts/lsvr_listing/archive-header.php
+template-parts/lsvr_notice/archive-header.php
+template-parts/lsvr_person/archive-header.php
+
+------------------------------
+
+v2.7.0
+
+Theme now supports Elementor plugin - a modern drag & drop page builder. You can download it from the official WordPress plugins repository https://wordpress.org/plugins/elementor
+
+Added options for custom social links under Appearance / Customize / Social Links
+
+Added LSVR 3rd Party Toolkit plugin which now handles the support for the Elementor plugins and the WPBakery Page Builder plugin. If you are using the default WordPress block editor (Gutenberg) then you do not have to install it.
+
+Fixed issue when draft and private events were displayed on the frontend
+
+Updated LSVR Directory plugin to 1.5.0
+
+Updated LSVR Documents plugin to 1.6.0
+
+Updated LSVR Elements plugin to 1.3.0
+
+Updated LSVR Events plugin to 1.6.0
+
+Updated LSVR Framework plugin to 1.5.0
+
+Updated LSVR Galleries plugin to 1.6.0
+
+Updated LSVR Notices plugin to 1.5.0
+
+Updated LSVR People plugin to 1.6.0
+
+Updated LSVR TownPress Toolkit plugin to 1.4.0
+
+Updated WPBakery Page Builder plugin to 6.0.3 (learn how to update it https://themeforest.net/item/townpress-municipality-wordpress-theme/11490395/faqs/32829)
+
+Various small fixes
+
+Changed core files: style.css, style.scss, languages, rtl.css, assets/js/townpress-scripts.js, assets/js/townpress-scripts.min.js, inc/core-functions.php, inc/customizer-config.php, inc/frontend-functions.php, inc/tgm-settings.php, inc/plugins/lsvr-townpress-toolkit.zip, inc/plugins/lsvr-documents.zip, inc/plugins/lsvr-directory.zip, inc/plugins/lsvr-elements.zip, inc/plugins/lsvr-events.zip, inc/plugins/lsvr-framework.zip, inc/plugins/lsvr-galleries.zip, inc/plugins/lsvr-people.zip, inc/plugins/lsvr-notices.zip
+
+New core files: inc/plugins/lsvr-3rd-party-toolkit.zip
+
+Removed core functions:
+lsvr_townpress_the_footer_social_links
+lsvr_townpress_the_footer_text
+lsvr_townpress_the_back_to_top_button
+
+Changed template files:
+footer.php
+
+Removed template files:
+template-parts/footer-bottom.php
+
+New template files:
+template-parts/footer/bottom.php
+template-parts/footer/social-links.php
+template-parts/footer/text.php
+
+------------------------------
+
+v2.6.0
+
+Multi-day events now display their end date on the archive page
+
+Added custom fields for person contact info and social links. The Skype social link was removed, but you can add it via new custom fields.
+
+Added Archive Order option for notices, people and galleries archive
+
+Added Posts Per Page option for person post archive
+
+Added option to change number of search results on search results page (Appearance / Customize / Misc)
+
+Updated LSVR Framework plugin to 1.4.5
+
+Updated LSVR Elements plugin to 1.2.4
+
+Updated LSVR Notices plugin to 1.4.0
+
+Updated LSVR Documents plugin to 1.5.0
+
+Updated LSVR Galleries plugin to 1.5.0
+
+Updated LSVR People plugin to 1.5.1
+
+Updated WPBakery Page Builder plugin to 6.0.3 (learn how to update it https://themeforest.net/item/pressville-municipal-wordpress-theme/19949423/faqs/32830)
+
+Various small fixes
+
+Changed files: style.css, style.scss, rtl.css, assets/css/skins, inc/actions.php, inc/customizer-config.php, inc/frontend-functions.php, inc/lsvr-documents/actions.php, inc/lsvr-documents/customizer-config.php, inc/lsvr-galleries/actions.php, inc/lsvr-galleries/customizer-config.php, inc/lsvr-notices/actions.php, inc/lsvr-notices/customizer-config.php, inc/lsvr-people/actions.php, inc/lsvr-people/customizer-config.php, inc/lsvr-people/lsvr-people.php, inc/tgm-settings.php, inc/plugins/lsvr-galleries.zip, inc/plugins/lsvr-documents.zip, inc/plugins/lsvr-people.zip, inc/plugins/lsvr-framework.zip, inc/plugins/lsvr-elements.zip, inc/plugins/lsvr-notices.zip
+
+Changed template files:
+template-parts/lsvr_person/archive-layout-default.php
+template-parts/lsvr_person/contact-info.php
+template-parts/lsvr_person/social-links.php
+
+------------------------------
+
+v2.5.0
+
+Added random order option for the default Directory archive
+
+Added order options (including random order) for the LSVR Directory widget
+
+Fixed issue with missing option to change the post author for LSVR custom post types
+
+Fixed issue with default lightbox labels translations not working
+
+Added option to display post excerpt on search results page (Appearance / Customize / Misc / Search Results Excerpt)
+
+Function lsvr_townpress_the_person_contact_info was removed and its functionality was moved into a template-parts/lsvr_person/contact-info.php file for easier customization
+
+Function lsvr_townpress_the_person_social_links was removed and its functionality was moved into a template-parts/lsvr_person/social-link.php file for easier customization
+
+Function lsvr_townpress_the_gallery_images was removed and its functionality was moved into a template-parts/lsvr_gallery/single-images.php file for easier customization
+
+Updated LSVR Directory plugin to 1.4.3
+
+Updated LSVR Documents plugin to 1.4.3
+
+Updated LSVR Events plugin to 1.5.6
+
+Updated LSVR Galleries plugin to 1.4.2
+
+Updated LSVR Notices plugin to 1.3.2
+
+Updated LSVR People plugin to 1.4.2
+
+Various small fixes
+
+Changed files:
+style.css, style.scss, editor-style.css, editor-style.scss, single-lsvr_person.php, single-lsvr_gallery.php, search.php, languages, inc/actions.php, inc/customizer-config.php, inc/frontend-functions.php, inc/lsvr-directory/actions.php, inc/lsvr-directory/customizer-config.php, inc/lsvr-people/frontend-functions.php, inc/lsvr-galleries/frontend-functions.php, template-parts/lsvr_person/archive-layout-default.php, template-parts/lsvr_gallery/archive-layout-photogrid.php, inc/tgm-settings.php, inc/plugins/lsvr-directory.zip, inc/plugins/lsvr-documents.zip, inc/plugins/lsvr-events.zip, inc/plugins/lsvr-galleries.zip, inc/plugins/lsvr-notices.zip, inc/plugins/lsvr-people.zip
+
+New files: template-parts/lsvr_person/contact-info.php, template-parts/lsvr_person/social-link.php, template-parts/lsvr_gallery/single-images.php
+
+------------------------------
+
+v2.4.4
+
+Added an option to limit the number of document post attachments displayed on the default document archive page. Use the Attachments Per Post option under Appearance / Customize / Documents.
+
+LSVR Featured Event widget should now display only upcoming events.
+
+Removed "Gutenberg Is Disabled" option from Appearance / Customize / Misc. The theme should now automatically work correctly whether you are using the Gutenberg editor or not.
+
+Updated LSVR Framework plugin to 1.4.2
+
+Updated LSVR Events plugin to 1.5.5
+
+Updated LSVR Documents plugin to 1.4.2
+
+Updated LSVR Elements plugin to 1.2.3
+
+Updated WPBakery Page Builder plugin to 5.7
+
+Updated documentation
+
+Various small fixes
+
+Changed files: style.css, style.scss, rtl.css, editor-style.scss, editor-style.css, editor-style.rtl.css, template-parts/lsvr_document/archive-layout-default.php, inc/actions.php, inc/customizer-config.php, inc/lsvr-documents/frontend-functions.php, inc/lsvr-documents/lsvr-documents.php, inc/tgm-settings.php, inc/plugins/lsvr-framework.zip, inc/plugins/lsvr-elements.zip, inc/plugins/lsvr-documents.zip, inc/plugins/lsvr-events.zip
+
+------------------------------
+
+v2.4.3
+
+Fixed issue with "every Xth weekday" event occurrence pattern. Please resave any event posts which are using this pattern after you update the LSVR Events plugin.
+
+Added support for title attribute for the header menu and the TownPress menu widget.
+
+Added "default" value for document archive order option.
+
+Updated LSVR TownPress Theme Toolkit to 1.3.1
+
+Updated LSVR Framework to 1.4.1
+
+Updated LSVR Events to 1.5.3
+
+Updated documentation
+
+Various small fixes
+
+Changed files: style.css, style.scss, editor-style.scss, assets/css/skins, inc/classes/lsvr-townpress-header-menu-walker.php, inc/classes/lsvr-townpress-header-mobile-menu-walker.php, inc/lsvr-documents/actions.php, inc/lsvr-documents/customizer-config.php, inc/lsvr-documents/lsvr-documents.php, inc/tgm-settings.php, inc/plugins/lsvr-townpress-toolkit.zip, inc/plugins/lsvr-framework.zip, inc/plugins/lsvr-events.zip
+
+------------------------------
+
+v2.4.2
+
+Fixed issue with geocoding addresses for directory listings and event locations
+
+Fixed issue with Gutenberg Gallery block images not opening in a lightbox
+
+Various small fixes
+
+Updated LSVR Directory plugin to 1.4.2
+
+Updated LSVR Elements plugin to 1.2.2
+
+Updated LSVR Events plugin to 1.5.2
+
+Updated documentation
+
+Changed files: style.css, style.scss, assets/js/townpress-scripts.js, assets/js/townpress-scripts.min.js, inc/actions.php, inc/lsvr-directory/actions.php, inc/lsvr-events/lsvr-events.php, inc/lsvr-events/customizer-config.php, inc/tgm-settings.php, inc/plugins/lsvr-directory.zip, inc/plugins/lsvr-elements.zip, inc/plugins/lsvr-events.zip
+
+------------------------------
+
+v2.4.1
+
+Fixed issue with missing categories and tags for LSVR post types in Gutenberg
+
+Updated LSVR Pressville Theme Toolkit plugin to 1.5.1
+
+Updated LSVR Elements plugin to 1.2.1
+
+Updated LSVR Notices plugin to 1.3.1
+
+Updated LSVR Directory plugin to 1.4.1
+
+Updated LSVR Events plugin to 1.5.1
+
+Updated LSVR Galleries plugin to 1.4.1
+
+Updated LSVR Documents plugin to 1.4.1
+
+Updated LSVR People plugin to 1.4.1
+
+Changed files: style.css, style.scss, inc/tgm-settings.php, inc/plugins/lsvr-pressville-toolkit.zip, inc/plugins/lsvr-notices.zip, inc/plugins/lsvr-directory.zip, inc/plugins/lsvr-elements.zip, inc/plugins/lsvr-events.zip, inc/plugins/lsvr-galleries.zip, inc/plugins/lsvr-documents.zip, inc/plugins/lsvr-people.zip
+
+------------------------------
+
+v2.4.0
+
+The theme is now fully optimized for the new Gutenberg block editor (the native content editor in WordPress 5.0). We HIGHLY recommend to update to WordPress 5.0 and switch your content to Gutenberg as soon as possible. If you are not ready yet, then install the Classic Editor plugin (https://wordpress.org/plugins/classic-editor/) and go to Appearance / Customize / Misc and enable "Gutenberg Is Disabled" option (don't forget to turn it off once you switch to Gutenberg).
+
+Please note that if you've already built pages in Gutenberg with the previous version, all TownPress and LSVR blocks will have to be re-inserted once you update to this newest version.
+
+If you are not using the Gutenberg editor, you may notice that position of some metaboxes (for example Sidebar Settings) have changed. Simply drag and drop them to the old position (or any other position you like).
+
+If you are using the default (red) predefined color scheme, then once you update go to Appearance / Customize / Colors, make sure the "Choose Predefined Skin" is set to "Default" and save your settings. If you are having any issues with the color scheme, try to switch to any other scheme, save it and then switch back to "Default" and save it again.
+
+Locating directory listings on map via address method should now be more reliable (make sure to check your Google Maps API settings under your Google account).
+
+Since the Gutenberg block editor is now the preferred content editor, the WPBakery Page Builder is no more included within the installable townpress.zip file. The WPBakery Page Builder is still supported though and you will find its installation .zip in the full package which you can download from your ThemeForest account (unzip it and go to Plugins folder where you will find js_composer.zip).
+
+Updated the demo data - please note that posts and pages demo data were created using the Gutenberg. Old (WPBakery Page Builder based) demo data is provided as well, you will find it in the full package / Legacy / VC demo data.
+
+The old version of the theme (TownPress 1.x) installation file was moved to Legacy / TownPress v1 folder in the full package.
+
+Updated the documentation
+
+Various small fixes
+
+Updated LSVR TownPress Theme Toolkit plugin to 1.3.0
+
+Updated LSVR Elements plugin to 1.2.0
+
+Updated LSVR Framework plugin to 1.4.0
+
+Updated LSVR Notices plugin to 1.3.0
+
+Updated LSVR Directory plugin to 1.4.0
+
+Updated LSVR Events plugin to 1.5.0
+
+Updated LSVR Galleries plugin to 1.4.0
+
+Updated LSVR Documents plugin to 1.4.0
+
+Updated LSVR People plugin to 1.4.0
+
+Updated Child Theme to 2.1.0
+
+Changed files: style.css, style.scss, functions.php, assets/css/skins, assets/js/townpress-scripts.js, assets/js/townpress-scripts.min.js, inc/actions.php, inc/customizer-config.php, inc/core-functions.php, inc/metaboxes-config.php, inc/tgm-settings.php, inc/custom-colors-template.php, inc/demo-import-config.php, inc/plugins/lsvr-townpress-toolkit.zip, inc/plugins/lsvr-framework.zip, inc/plugins/lsvr-elements.zip, inc/plugins/lsvr-notices.zip, inc/plugins/lsvr-directory.zip, inc/plugins/lsvr-events.zip, inc/plugins/lsvr-galleries.zip, inc/plugins/lsvr-documents.zip, inc/plugins/lsvr-people.zip
+
+New files: editor-style.css, editor-style.scss, editor-style.rtl.css, inc/editor-custom-colors-template.php
+
+------------------------------
+
+v2.3.1
+
+Added following new LSVR elements:
+LSVR Button
+LSVR CTA
+LSVR Pricing Table
+
+Changed the Directory admin menu icon
+
+Updated LSVR Elements plugin to 1.1.0
+
+Updated LSVR Framework plugin to 1.3.2
+
+Updated LSVR Notices plugin to 1.2.1
+
+Updated LSVR Directory plugin to 1.3.1
+
+Updated LSVR Events plugin to 1.4.1
+
+Updated LSVR Galleries plugin to 1.3.1
+
+Updated LSVR Documents plugin to 1.3.1
+
+Updated LSVR People plugin to 1.3.1
+
+Updated WPBakery Page Builder plugin to 5.6
+
+Changed files: style.css, style.scss, rtl.css, assets/css/skins, inc/custom-colors-template.php, inc/tgm-settings.php, inc/plugins/lsvr-townpress-toolkit.zip, inc/plugins/lsvr-framework.zip, inc/plugins/lsvr-notices.zip, inc/plugins/lsvr-directory.zip, inc/plugins/lsvr-events.zip, inc/plugins/lsvr-galleries.zip, inc/plugins/lsvr-documents.zip, inc/plugins/lsvr-people.zip, inc/plugins/js_composer.zip
+
+------------------------------
+
+v2.3.0
+
+Added support for new Gutenberg editor. Only standard posts and regular pages are currently supported though. All TownPress and LSVR elements available in WPBakery Page Builder are now available in Gutenberg editor as well. Please note that since the WordPress 5.0 (which will include Gutenberg in the core) is still not released and the Gutenberg plugin itself is still under constant development, consider this functionality to be in a beta. The WPBakery Page Builder is still a preferred method to built your pages.
+
+Added LSVR Elements plugin which contains bunch of new widgets and shortcodes:
+LSVR Definition List widget
+LSVR Featured Post widget
+LSVR Posts widget
+LSVR Alert Message shortcode
+LSVR Counter shortcode
+LSVR Definition List Widget shortcode
+LSVR Feature shortcode
+LSVR Featured Post Widget shortcode
+LSVR Posts Widget shortcode
+LSVR Progress Bar shortcode
+lsvr_icon shortcode
+All shortcodes (except lsvr_icon) are available as elements in both the WPBakery Page Builder and new Gutenberg editor.
+
+TownPress Posts widget, TownPress Featured Post widget, TownPress Post List Widget shortcode and lsvr_townpress_icon shortcode are now DEPRECATED and will be removed in the future updates. Please use LSVR Posts widget, LSVR Featured Post widget, LSVR Posts Widget shortcode and lsvr_icon shortcode instead.
+
+Added an error message for the listing post to display any potential error returned from the Google API when you are saving the listing and using the Exact Address option. Please note, that since the recent updates to the Google API, your old API keys may not work anymore. However, using the latitude and longitude options instead of the exact address is the most safest way to locate your listings on the map.
+
+Fixed issue with inconsistent formatting of event info on event detail page
+
+Updated LSVR TownPress Toolkit plugin to 1.2.0
+
+Updated LSVR Framework plugin to 1.3.0
+
+Updated LSVR Notices plugin to 1.2.0
+
+Updated LSVR Directory plugin to 1.3.0
+
+Updated LSVR Events plugin to 1.4.0
+
+Updated LSVR Galleries plugin to 1.3.0
+
+Updated LSVR Documents plugin to 1.3.0
+
+Updated LSVR People plugin to 1.3.0
+
+Updated the RTL version
+
+Updated the documentation
+
+Various small fixes
+
+Changed files: style.css, style.scss, rtl.css, assets/css/skins, inc/actions.php, inc/custom-colors-template.php, inc/lsvr-events/lsvr-events.php, inc/lsvr-galleries/frontend-functions.php, inc/tgm-settings.php, inc/plugins/lsvr-townpress-toolkit.zip, inc/plugins/lsvr-framework.zip, inc/plugins/lsvr-notices.zip, inc/plugins/lsvr-directory.zip, inc/plugins/lsvr-events.zip, inc/plugins/lsvr-galleries.zip, inc/plugins/lsvr-documents.zip, inc/plugins/lsvr-people.zip
+
+New files: inc/plugins/lsvr-elements.zip
+
+------------------------------
+
+v2.2.9
+
+Further improvements to the start and end times display for recurring events.
+
+Updated LSVR Events plugin to 1.3.4
+
+Changed files: style.css, style.scss, inc/lsvr-events/frontend-functions.php, inc/tgm-settings.php, inc/plugins/lsvr-events.zip
+
+------------------------------
+
+v2.2.8
+
+Fixed bug with incorrectly displayed start and end times for some recurring events. After you update the LSVR Events to 1.3.3, go to Tools / Regen. Events and click "Regenerate" button
+
+Updated LSVR Events plugin to 1.3.3
+
+Changed files: style.css, style.scss, inc/lsvr-events/frontend-functions.php, inc/tgm-settings.php, inc/plugins/lsvr-events.zip
+
+------------------------------
+
+v2.2.7
+
+You can now access events archive using the URL parameters like this:
+yoursite.com/events/?period=past&order=desc
+
+When creating a new standard page, the Right Sidebar option is now set to "disable" by default.
+
+Updated LSVR Framework plugin to 1.2.1
+
+Updated LSVR Galleries plugin to 1.2.3
+
+Updated WPBakery Page Builder plugin to 5.5.5
+
+Various small fixes
+
+Changed files: style.css, style.scss, inc/core-functions.php, inc/metaboxes-config.php, inc/lsvr-events/lsvr-events.php, inc/lsvr-galleries/frontend-functions.php, inc/tgm-settings.php, inc/plugins/js_composer.zip, inc/plugins/lsvr-framework.zip, inc/plugins/lsvr-galleries.zip
+
+------------------------------
+
+v2.2.6
+
+Fixed bug with directory map location boxes not closing properly
+
+Changed files: style.css, style.scss, assets/js/marketcluster.min.js, assets/townpress-ajax-directory-map.js, assets/townpress-ajax-directory-map.min.js
+
+------------------------------
+
+v2.2.5
+
+Fixed bug with directory map location boxes sometimes not displaying correctly
+
+Further WPML compatibility improvements
+
+Updated LSVR Directory plugin to 1.2.3
+
+Updated LSVR Documents plugin to 1.2.3
+
+Updated LSVR Notices plugin to 1.1.3
+
+Updated LSVR TownPress Toolkit plugin to 1.1.3
+
+Updated WPBakery Page Builder plugin to 5.5.4
+
+Changed files: style.css, style.scss, single.php, assets/js/infobox.min.js, assets/townpress-ajax-directory-map.js, assets/townpress-ajax-directory-map.min.js, inc/frontend-functions.php, inc/core-functions.php, inc/lsvr-directory/ajax-directory-map.php, inc/tgm-settings.php, inc/plugins/js_composer.zip, inc/plugins/lsvr-documents.zip, inc/plugins/lsvr-directory.zip, inc/plugins/lsvr-notices.zip, inc/plugins/lsvr-townpress-toolkit.zip
+
+------------------------------
+
+v2.2.4
+
+Improvements to LSVR plugins compatibility with WPML
+
+Category description is now displayed in document category archive page
+
+Updated LSVR Directory plugin to 1.2.2
+
+Updated LSVR Documents plugin to 1.2.2
+
+Updated LSVR Galleries plugin to 1.2.2
+
+Updated LSVR Notices plugin to 1.1.2
+
+Updated LSVR People plugin to 1.2.2
+
+Updated LSVR TownPress Toolkit plugin to 1.1.2
+
+Changed files: style.css, style.scss, template-parts/lsvr_document/archive-layout-default.php, template-parts/lsvr_document/archive-layout-categorized-attachments.php, inc/lsvr-directory/lsvr-directory.php, inc/lsvr-documents/lsvr-documents.php, inc/tgm-settings.php, inc/plugins/lsvr-documents.zip, inc/plugins/lsvr-directory.zip, inc/plugins/lsvr-galleries.zip, inc/plugins/lsvr-notices.zip, inc/plugins/lsvr-people.zip, inc/plugins/lsvr-townpress-toolkit.zip
+
+------------------------------
+
+v2.2.3
+
+Added new event occurrence pattern: "every last [weekday]"
+
+Added option to open social links in a new window (under Customizer / Social Links)
+
+Fixed bug with Customizer / Galleries / Enable Gallery Detail Navigation option, please re-save your settings
+
+Fixed issues with touch functionality for header menu and TownPress Menu widget
+
+Fixed issues with recurring events
+
+Updated LSVR Events plugin to 1.3.2
+
+Changed files: style.css, style.scss, languages, assets/js/townpress-scripts.js, assets/js/townpress-scripts.min.js, template-parts/single-navigation.php, inc/actions.php, inc/lsvr-gallery/actions.php, inc/lsvr-gallery/customizer-config.php, inc/customizer/config.php, inc/frontend-functions.php, inc/lsvr-events/lsvr-events.php, inc/tgm-settings.php, inc/plugins/lsvr-events.zip
+
+------------------------------
+
+v2.2.2
+
+Updated WPBakery Page Builder to 5.5.2
+
+Changed files: style.css, style.scss, inc/tgm-settings.php, inc/plugins/js_composer.zip
+
+------------------------------
+
+v2.2.1
+
+Fixed issue with LSVR plugins when they may not function properly on some installations
+
+Updated LSVR TownPress Theme Toolkit plugin to 1.1.1
+
+Updated LSVR Directory plugin to 1.2.1
+
+Updated LSVR Documents plugin to 1.2.1
+
+Updated LSVR Events plugin to 1.3.1
+
+Updated LSVR Galleries plugin to 1.2.1
+
+Updated LSVR Notices plugin to 1.1.1
+
+Updated LSVR People plugin to 1.2.1
+
+Changed files: style.css, style.scss, inc/tgm-settings.php, inc/plugins/lsvr-townpress-toolkit.php, inc/plugins/lsvr-directory.php, inc/plugins/lsvr-documents.php, inc/plugins/lsvr-events.php, inc/plugins/lsvr-galleries.php, inc/plugins/lsvr-notices.php, inc/plugins/lsvr-people.php
+
+------------------------------
+
+v2.2.0
+
+Various code changes to the theme and all LSVR plugins to comply with the latest Envato WP theme requirements
+
+Updated LSVR TownPress Theme Toolkit plugin to 1.1.0
+
+Updated LSVR Framework plugin to 1.2.0
+
+Updated LSVR Directory plugin to 1.2.0
+
+Updated LSVR Documents plugin to 1.2.0
+
+Updated LSVR Events plugin to 1.3.0
+
+Updated LSVR Galleries plugin to 1.2.0
+
+Updated LSVR Notices plugin to 1.1.0
+
+Updated LSVR People plugin to 1.2.0
+
+Changed files: style.css, style.scss, rtl.css, assets/css/skins, inc/actions.php, inc/tgm-settings.php, inc/plugins/lsvr-townpress-toolkit.php, inc/plugins/lsvr-framework.php, inc/plugins/lsvr-directory.php, inc/plugins/lsvr-documents.php, inc/plugins/lsvr-events.php, inc/plugins/lsvr-galleries.php, inc/plugins/lsvr-notices.php, inc/plugins/lsvr-people.php
+
+------------------------------
+
+v2.1.6
+
+Fixed bug with pagination on events archive page
+
+Improved compatibility with WPML for LSVR Events plugin
+
+Updated LSVR Events plugin to 1.2.6
+
+Fixed issue with TownPress Sitemap element on mobile devices
+
+Added arrow icon for top level header menu items to indicate the submenu. You can use the following CSS to get rid of it:
+.header-menu__item--level-0.menu-item-has-children > .header-menu__item-link:after { display: none; }
+
+Updated TownPress v1 to 1.6.2
+
+Changed files: style.css, style.scss, inc/lsvr-events/frontend-functions.php, inc/tgm-settings.php, inc/plugins/lsvr-events.php
+
+------------------------------
+
+v2.1.5
+
+Post Slider and Posts elements now allow some basic HTML in post excerpt
+
+Fixed issue with post slider element on mobile devices
+
+Fixed issue with demo importer placeholder images
+
+Updated LSVR TownPress Theme Toolkit plugin to 1.0.6
+
+Various small fixes
+
+Changed files: style.css, style.scss, assets/css/skins, inc/demo-import, inc/lsvr-documents/customizer-config.php, inc/tgm-settings.php, inc/plugins/lsvr-townpress-toolkit.php
+
+------------------------------
+
+v2.1.4
+
+Added "Read More" link after TownPress Featured Post widget excerpt
+
+Added option to enable header slideshow for homepage only
+
+Updated LSVR TownPress Theme Toolkit plugin to 1.0.5
+
+Various small fixes
+
+Changed files: style.css, style.scss, rtl.css, assets/js/townpress-scripts.js, assets/js/townpress-scripts.min.js, inc/frontend-functions.php, inc/customizer-config.php, inc/lsvr-person/frontend-functions.php, inc/tgm-settings.php, inc/plugins/lsvr-townpress-toolkit.php, languages
+
+------------------------------
+
+v2.1.3
+
+Updated LSVR TownPress Theme Toolkit plugin to 1.0.4
+
+Updated LSVR Events plugin to 1.2.5
+
+Updated Envato Market plugin to 2.0.0
+
+Improved people archive on mobile devices
+
+Various small fixes
+
+Changed files: style.css, style.scss, inc/core-functions.php, inc/lsvr-galleries/lsvr-galleries, inc/lsvr-people/frontend-functions.php, template-parts/blog/archive-header.php, inc/tgm-settings.php, inc/plugins/lsvr-townpress-toolkit.php, inc/plugins/lsvr-events.php, inc/plugins/envato-market.php
+
+------------------------------
+
+v2.1.2
+
+Various small fixes
+
+Updated LSVR Framework plugin to 1.1.5
+
+Updated LSVR Events plugin to 1.2.4
+
+Updated LSVR Documents plugin to 1.1.4
+
+Updated WPBakery Page Builder (formerly Visual Composer) to 5.4.7
+
+Changed files: style.css, style.scss, inc/lsvr-directory/frontend-functions.php, inc/tgm-settings.php, inc/plugins/lsvr-framework.php, inc/plugins/lsvr-events.php, inc/plugins/lsvr-documents.php, includes/plugins/js_composer.zip
+
+------------------------------
+
+v2.1.1
+
+TownPress Post Slider element now have an option to set its height.
+
+Footer text color is now more bright for better readability.
+
+Fixed issues with DST in recurring events.
+
+Various small fixes
+
+Updated LSVR TownPress Theme Toolkit plugin to 1.0.3
+
+Updated LSVR Events plugin to 1.2.2
+
+Changed files: style.css, style.scss, rtl.css, bbpress.php, assets/css/skins, inc/core-functions.php, inc/bbpress/actions.php, inc/plugins/lsvr-townpress-toolkit.php, inc/plugins/lsvr-events.php, inc/tgm-settings.php
+
+------------------------------
+
+v2.1.0
+
+Events can now repeat in "every Xth [week day]" pattern. For example: every second Tuesday, every first Friday, etc.
+
+Added option to hide gallery images count. For the gallery archive page it is managed under Customizer / Galleries with "Display Image Count on Archive" options. For LSVR Galleries and LSVR Featured Gallery widgets/elements it is set by "Display Image Count" option found in widget's settings. Please re-save settings for any instances of those two widgets you are using once you update the LSVR Galleries plugin.
+
+Added option to hide attachments count for LSVR Documents widget/element. Please re-save settings for any instances of this widget you are using once you update the LSVR Documents plugin.
+
+Fixed issue with notice archive page title
+
+Further improvements to RTL version
+
+Various small fixes
+
+Updated LSVR Framework plugin to 1.1.4
+
+Updated LSVR Directory plugin to 1.1.2
+
+Updated LSVR Events plugin to 1.2.0
+
+Updated LSVR Documents plugin to 1.1.3
+
+Updated LSVR Galleries plugin to 1.1.1
+
+Updated LSVR People plugin to 1.1.1
+
+Changed files: style.css, style.scss, rtl.css, inc/lsvr-documents/classes/lsvr-townpress-document-categorized-attachments.php, inc/lsvr-events/lsvr-events.php, template-parts/lsvr_notice/archive-layout-default.php, template-parts/lsvr_gallery/archive-layout-photogrid.php, inc/plugins/lsvr-events.php, inc/plugins/lsvr-documents.php, inc/plugins/lsvr-galleries.php, inc/plugins/lsvr-framework.php, inc/plugins/lsvr-people.php, inc/plugins/lsvr-directory.php, inc/tgm-settings.php
+
+------------------------------
+
+v2.0.3
+
+Document post attachments can be now displayed by their titles. You can enable this functionality for document post archive and document post detail pages under Customizer / Documents using "Display Attachment Titles" option. Attachment titles can be edited under Media. You can enable this functionality for LSVR Featured Document and LSVR Attachments widgets/element via their own "Display Attachment Titles" checkboxes. This applies only to local attachments.
+
+Fixed issues with author archive page
+
+Fixed issues with RTL
+
+Updated LSVR Documents plugin to 1.1.2
+
+Changed files: style.css, style.scss, rtl.css, inc/actions.php, inc/core-functions.php, inc/lsvr-documents/lsvr-documents.php, inc/lsvr-documents/frontend-functions.php, inc/lsvr-documents/customizer-config.php, inc/plugins/lsvr-documents.php, inc/tgm-settings.php
+
+------------------------------
+
+v2.0.2
+
+Fixed issue with directory listing meta data
+
+Various small fixes
+
+Changed files: style.css, style.scss, single-lsvr_listing.php, inc/actions.php, inc/lsvr-directory/lsvr-directory.php
+
+------------------------------
+
+v2.0.1
+
+Fixed issue with dates for document, notice, gallery and standard posts
+
+Fixed link in "more link" in Pressville Posts element articles
+
+Updated LSVR TownPress Theme Toolkit plugin to 1.0.2
+
+Updated LSVR Framework plugin to 1.1.3
+
+Various small fixes
+
+Changed files: style.css, style.scss, single.php, single-lsvr_document.php, single-lsvr_gallery.php, single-lsvr_notice.php, template-parts/blog/archive-layout-default.php, template-parts/lsvr_document/archive-layout-default.php, template-parts/lsvr_gallery/archive-layout-default.php, template-parts/lsvr_notice/archive-layout-default.php, inc/plugins/lsvr-townpress-toolkit.php, inc/tgm-settings.php
+
+------------------------------
+
+v2.0.0
+
+This update is basically a brand new theme with the original TownPress design. There is probably not a single file or feature which has not been changed, so let's list only some of the most notable new features:
+
+- listing directory functionality with the map
+- recurring events
+- document posts can now contain multiple file attachments
+- person directory
+- main theme settings can be now managed via WordPress Customizer
+- all custom post types (listings, events, galleries, notices, people) come in a form of separate plugin so you can install only the ones you want to use to avoid unnecessary bloating
+- much cleaner code for easier customization for developers
+
+IMPORTANT - the 2.0 version is NOT compatible with 1.x version. Proceed very carefully if you are updating from TownPress 1.x. It is highly recommended to do a clean install instead.
+
+The most recent 1.x version can be found in the full package (in "Old Version" folder). It is supposed to be a backup for existing 1.x users and it also may be updated in the future in case of fixing any critical bugs in 1.x. If you are a new TownPress user, DO NOT install the 1.x version as it is no longer supported. I will still provide support for 1.x users who bought the theme before 2.0 release and have a valid support.
+
+------------------------------
+
+v1.6.0
+
+TownPress 2.0 beta version was added to the full package. You can download the full package under your ThemeForest account / Downloads. You will find the installable .zip file in the "Beta" folder once you unzip the full package archive.
+
+Added announcement about TownPress 2.0 to the dashboard.
+
+Changed files: style.css, style.scss, functions.php
+
+------------------------------
+
+v1.5.9
+
+Updated LSVR Toolkit (TownPress) plugin to 1.3.2
+
+Fixed issues with weather forecast in Locale widget
+
+Changed files: style.css, style.scss, library/js/scripts.min.js, library/js/scripts.js includes/tgm-plugin-settings.php, ajax/local-weather.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.5.8
+
+Updated WPBakery Page Builder (formerly Visual Composer) to 5.4.5
+
+Fixed issues with weather forecast in Locale widget
+
+Changed files: style.css, style.scss, library/js/scripts.min.js, library/js/scripts.js includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip, ajax/local-weather.php
+
+------------------------------
+
+v1.5.7
+
+Updated WPBakery Page Builder (formerly Visual Composer) to 5.4.4
+
+Various small fixes
+
+Changed files: style.css, style.scss, library/js/scripts.min.js, library/js/scripts.js, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip, includes/redux/options-config.php, ajax/local-weather.php
+
+------------------------------
+
+v1.5.6
+
+Updated Visual Composer to 5.4.2
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip
+
+------------------------------
+
+v1.5.5
+
+Fixed lightbox issue with Gallery element/shortcode
+
+Updated LSVR Toolkit (TownPress) plugin to 1.3.1
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.5.4
+
+Updated LSVR Toolkit (TownPress) plugin to 1.3.0
+
+Updated Visual Composer to 5.3
+
+Updated TGMPA class to 2.6.1
+
+Fixed issue with post excerpts in Notices element
+
+Various small fixes
+
+Changed files: style.css, style.scss, article.php, single-lsvrgallery.php, library/js/library.js, library/js/library.min.js, languages/townpress.pot, includes/tgm-plugin-settings.php, includes/tgm-plugin-activation.class.php, includes/plugins/js_composer.zip
+
+------------------------------
+
+v1.5.3
+
+Updated Visual Composer to 5.2.1
+
+Updated Redux Framework to 3.6.5
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip, includes/plugins/redux-framework.zip
+
+------------------------------
+
+v1.5.2
+
+Fixed issue with header map on mobile view
+
+Updated Visual Composer to 5.2
+
+Various small fixes
+
+Changed files: style.css, style.scss, functions.php, 404.php, page.php, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip, includes/plugins/js_composer.zip
+
+------------------------------
+
+v1.5.1
+
+Additional changes to Articles shortcode/element: the excerpt will be displayed by default. Added a new option - "Display Whole Content". Enable it to display full post content instead of just an excerpt.
+
+Updated LSVR Toolkit (TownPress) plugin to 1.2.9
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.5.0
+
+The Articles shortcode/element now displays excerpt only if it was defined via Excerpt field (you can display the field under Screen Options in upper right corner when editing the post). Full post content will be displayed otherwise.
+
+Updated LSVR Toolkit (TownPress) plugin to 1.2.8
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.4.9
+
+Updated Visual Composer to 5.1.1
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip, includes/plugins/js_composer.zip
+
+------------------------------
+
+v1.4.8
+
+Updated Visual Composer to 5.1
+
+Updated LSVR Toolkit (TownPress) plugin to 1.2.7
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip, includes/plugins/js_composer.zip
+
+------------------------------
+
+v1.4.7
+
+Fixed weather bug in Locale widget
+
+Updated LSVR Toolkit (TownPress) plugin to 1.2.6
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.4.6
+
+Updated LSVR Toolkit (TownPress) plugin to 1.2.5
+
+Updated FontAwesome to 4.7
+
+Updated documentation
+
+Various small fixes
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/visual-composer-settings.php, library/fonts, library/css/import/font-awesome.css, library/css/import/font-awesome.scss, includes/plugins/lsvr-toolkit-townpress.zip
+
+
+------------------------------
+
+v1.4.5
+
+Updated LSVR Toolkit (TownPress) plugin to 1.2.4
+
+Updated documentation
+
+Various small fixes
+
+Changed files: style.css, style.scss, functions.php, header.php, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.4.4
+
+Updated LSVR Toolkit (TownPress) plugin to 1.2.3
+
+Various small fixes
+
+Changed files: style.css, style.scss, page.php, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.4.3
+
+Updated Visual Composer to 5.0.1
+
+Various small fixes
+
+Changed files: style.css, style.scss, library/js/scripts.js, library/js/scripts.min.js, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip
+
+------------------------------
+
+v1.4.2
+
+Updated Visual Composer to 5.0
+
+Various small fixes
+
+Changed files: style.css, style.scss, page.php, includes/redux/extensions, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip, includes/plugins/redux-framework.zip
+
+------------------------------
+
+v1.4.1
+
+Updated Visual Composer to 4.12.1
+
+Various small fixes
+
+Changed files: style.css, style.scss, functions.php, header.php, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip
+
+------------------------------
+
+v1.4.0
+
+Changed icons in TownPress icon pack (icons with "tp tp-" prefix) to a different icon set. Check out the documentation for complete list of icons
+http://demos.volovar.net/townpress.wp/documentation/#icons
+
+Changed files: style.css, style.scss, library/fonts, library/css/import/font-townpress.css, library/css/import/font-townpress.scss
+
+------------------------------
+
+v1.3.9
+
+Document posts can now have a description (added via Excerpt field). Description will be displayed on archive page only
+
+Addressed some issues with Google maps
+
+Updated LSVR Toolkit (TownPress) plugin to 1.2.1
+
+Changed files: style.css, style.scss, functions.php, footer.php, archive-lsvrdocument.php, library/js/library.js, library/js/library.min.js, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.3.8
+
+Added new field to Theme Options / Header Settings - Google Maps API Key
+Google Map API Key is now required for Google Maps to work! You can generate your own at https://developers.google.com/maps/documentation/javascript/get-api-key
+
+Updated LSVR Toolkit (TownPress) plugin to 1.2.1
+
+Changed files: style.css, style.scss, functions.php, footer.php, includes/redux/options-config.php, library/js/library.js, library/js/library.min.js, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.3.7
+
+Updated Visual Composer to 4.12
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip
+
+------------------------------
+
+v1.3.6
+
+Updated FontAwesome to 4.6.3
+
+Various small fixes
+
+Changed files: style.css, style.scss, library/fonts, library/css/import/font-awesome.scss, library/css/import/font-awesome.css, includes/tgm-plugin-settings.php, includes/plugins/redux-framework.zip
+
+------------------------------
+
+v1.3.5
+
+Fixed issues with LSVR Galleries widget
+
+Updated LSVR Toolkit (TownPress) plugin to 1.2.0
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.3.4
+
+Linked image in LSVR Image widget can now be set to open in new tab
+
+Updated LSVR Toolkit (TownPress) plugin to 1.1.9
+
+Various small fixes
+
+Changed files: style.css, style.scss, functions.php, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.3.3
+
+Added comments support for Events, Notices and Pages
+
+More button in LSVR Events widget will link to a category archive if category is defined
+
+Updated Visual Composer to 4.11.2.1
+
+Updated LSVR Toolkit (TownPress) plugin to 1.1.8
+
+Updated Redux Framework to 3.6.0.1
+
+Updated FontAwesome to 4.6.1
+
+Various small fixes
+
+Changed files: style.css, style.scss, library/fonts, library/css/import/font-awesome.scss, library/css/import/font-awesome.css, archive-lsvrevent.php, archive-lsvrnotice.php, page.php, single-lsvrnotice.php, single-lsvrevent.php, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip, includes/plugins/lsvr-toolkit-townpress.zip, includes/plugins/redux-framework.zip
+
+------------------------------
+
+v1.3.2
+
+Updated Visual Composer to 4.11.2
+
+Updated LSVR Toolkit (TownPress) plugin to 1.1.7
+
+Added wider range of options for Number of posts field in Articles element
+
+Various small fixes
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.3.1
+
+Fixed an issue with admin bar overlapping the header on front-end
+
+Changed files: style.css, style.scss, functions.php
+
+------------------------------
+
+v1.3.0
+
+Updated Visual Composer to 4.11.1
+
+Updated LSVR Toolkit (TownPress) plugin to 1.1.6
+
+Various small fixes
+
+Changed files: style.css, style.scss, rtl.css, header.php, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip, includes/plugins/lsvr-toolkit-townpress.zip, includes/plugins/redux-framework.zip
+
+------------------------------
+
+v1.2.9
+
+Added Notices element into Visual Composer
+
+Fixed compatibility with Contact Form 7 4.4
+
+Fixed bugs with default comment form
+
+Better compatibility with 3rd party plugins - this fix required change of almost all default .php files in theme's root. So if you are using Child Theme where you are overriding any of those .php files, please copy them from Parent theme and make your changes again. Basically, the DIV with ID "core" and DIV with class "c-container" were moved from default files like index.php, page.php, 404.php, search.php and all "archive-" and "single-" .php into header.php and footer.php. Please see the complete changelog for list of all affected files. If you are not using Child theme or you've never copied any .php file from Parent theme to your Child theme, just ignore this message.
+
+Updated Articles element so you can highlight more than just first post - please check your settings for this element
+
+Updated LSVR Toolkit (TownPress) plugin to 1.1.5
+
+Various small fixes
+
+Changed files: style.css, style.scss, languages, rtl.css, library/css/skin, library/js/scripts.js, library/js/scripts.min.js, library/js/library.js, library/js/library.min.js, header.php, footer.php, index.php, page.php, 404.php, comments.php, search.php, bbpress.php, archive-lsvrdocument.php, archive-lsvrevent.php, archive-lsvrgallery.php, archive-lsvrnotice.php, single-lsvrdocument.php, single-lsvrevent.php, single-lsvrgallery.php, single-lsvrnotice.php, includes/redux/options-config.php, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.2.8
+
+Fixed issue with custom page titles
+
+Changed files: style.css, style.scss, components/page-header.php
+
+------------------------------
+
+v1.2.7
+
+Added Events element into Visual Composer
+
+Added category filter into LSVR Events widget
+
+Updated Visual Composer to 4.10
+
+Updated LSVR Toolkit (TownPress) plugin to 1.1.4
+
+Various small fixes
+
+Changed files: style.css, style.scss, functions.php, 404.php, components/page-header.php, languages/en_GB.mo, languages/en_GB.po, library/css/skin, includes/lsvr-functions.php, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.2.6
+
+Added options to enable displaying author on Post and Notice details
+
+Updated Redux Framework to 3.5.9
+
+Changed files: style.css, style.scss, rtl.css, article.php, single-lsvrnotice.php, includes/redux/options-config.php, includes/tgm-plugin-settings.php, includes/plugins/redux-framework.zip
+
+------------------------------
+
+v1.2.5
+
+Fixed Category bug and added "list all" option for LSVR Documents, LSVR Galleries and LSVR Notices widgets
+
+Updated LSVR Toolkit (TownPress) plugin to 1.1.3
+
+Updated Visual Composer to 4.9.2
+
+Various small fixes
+
+Changed files: style.css, style.scss, functions.php, library/js/library.min.js, library/js/library.js, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip, includes/plugins/js_composer.zip
+
+------------------------------
+
+v1.2.4
+
+Fixed issue with alt text in Image element added via Visual Composer
+
+Fixed incorrect date issue in LSVR Locale Info widget
+
+Updated LSVR Toolkit (TownPress) plugin to 1.1.2
+
+Various small fixes
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.2.3
+
+Fixed issue with document title
+
+Updated Visual Composer to 4.9.1
+
+Changed files: style.css, style.scss, functions.php, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip
+
+------------------------------
+
+v1.2.2
+
+Fixed an issue with background image for post and document archives
+
+Fixed an issue with order of documents in documents archive
+
+Changed files: style.css, style.scss, header.php, functions.php
+
+------------------------------
+
+v1.2.1
+
+Updated Visual Composer to 4.9
+
+Updated FontAwesome icons to 4.5.0
+
+Updated TGM Activation Class to 2.5.2
+
+Changed files: style.css, style.scss, library/fonts, library/css/import/font-awesome.scss, library/css/import/font-awesome.css, includes/tgm-plugin-activation.class.php, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip, 
+
+------------------------------
+
+v1.2.0
+
+Added Documents element into Visual Composer
+
+Updated LSVR Toolkit (TownPress) plugin to 1.1.1
+
+Various small fixes
+
+Changed files: style.css, style.scss, library/css/skin, includes/redux/metaboxes/extension_metaboxes.php, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.1.9
+
+Updated Visual Composer to 4.8.1
+
+Updated FontAwesome icons to 4.4.0
+
+Various small fixes
+
+Changed files: style.css, style.scss, functions.php, library/fonts, library/css/import/font-awesome.scss, library/css/import/font-awesome.css, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip, includes/visual-composer-settings.php
+
+------------------------------
+
+v1.1.8
+
+Updated Visual Composer to 4.8.0.1
+
+Various small fixes
+
+Changed files: style.css, style.scss, functions.php, library/js/scripts.min.js, library/js/scripts.js, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip
+
+------------------------------
+
+v1.1.7
+
+Updated Redux Framework to 3.5.8.1
+
+Various small fixes
+
+Changed files: style.css, style.scss, functions.php, ajax/local-weather.php, components/visualcomposer/layouts/bbpress-lost-password.php, includes/tgm-plugin-settings.php, includes/plugins/redux-framework.zip
+
+------------------------------
+
+v1.1.6
+
+Updated Visual Composer to 4.7.4
+
+Updated LSVR Toolkit (TownPress) plugin to 1.1.0
+
+Image captions for images in gallery are now displayed in lightbox
+
+Various small fixes
+
+Changed files: style.css, style.scss, rtl.css, library/css/skin, includes/lsvr-walker-comment.class.php, components/pagination.php, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.1.5
+
+Updated Visual Composer to 4.7.2
+
+Various small fixes
+
+Changed files: style.css, style.scss, functions.php, archive-lsvrgallery.php, library/js/scripts.js, library/js/scripts.min.js, library/js/third-party.js, components/breadcrumbs.php, includes/visual-composer-settings.php, includes/redux/options-config.php, includes/tgm-plugin-settings.php
+
+------------------------------
+
+v1.1.4
+
+Updated Visual Composer to 4.7
+
+Updated LSVR Toolkit (TownPress) plugin to 1.0.9
+
+Updated Redux Framework to 3.5.7
+
+Various small fixes
+
+Changed files: style.css, style.scss, header.php, functions.php, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip, includes/plugins/js_composer.zip, includes/plugins/redux-framework.zip
+
+------------------------------
+
+v1.1.3
+
+Fixed issue with date picker when editing Event post type
+
+Changed files: style.css, style.scss, includes/redux/extensions/datetime
+
+------------------------------
+
+v1.1.2
+
+WP 4.3 compatibility fixes
+
+Updated LSVR Toolkit (TownPress) plugin to 1.0.8
+
+Changed files: style.css, style.scss, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip,
+
+------------------------------
+
+v1.1.1
+
+Updated Visual Composer to 4.6.2
+
+Updated LSVR Toolkit (TownPress) plugin to 1.0.7
+
+Updated Visual Composer to 3.5.6.1
+
+Various small fixes
+
+Changed files: style.css, style.scss, functions.php, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip, includes/plugins/js_composer.zip, includes/plugins/resux-framework.zip
+
+------------------------------
+
+v1.1.0
+
+Fixed the bug if Front page displays under Settings / Reading was set to Your latest posts. Now you will be able to set a Base page for Posts under Theme Options / Standard Posts. Page Settings of that page will now control sidebars of your post list.
+
+Updated LSVR Toolkit (TownPress) plugin to 1.0.6
+
+Various small fixes
+
+Changed files: style.css, style.scss, components/breadcrumbs.php, includes/lsvr-functions.php, includes/redux/options-config.php, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.0.9
+
+Updated LSVR Toolkit (TownPress) plugin to 1.0.5
+
+Various small fixes
+
+Changed files: style.css, style.scss, functions.php, includes/tgm-plugin-settings.php, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.0.8
+
+Category description for all post types is now displayed at the top of item list (if defined)
+
+Updated LSVR Toolkit (TownPress) plugin to 1.0.4
+
+Updated Visual Composer to 4.6.1
+
+Various small fixes
+
+Changed files: style.css, style.scss, archive-lsvrdocument.php, archive-lsvrnotice.php, archive-lsvrevent.php, archive-lsvgallery.php, index.php, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip, includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.0.7
+
+Fixed bug with header map
+
+Changed files: style.css, style.scss, rtl.css, header.php
+
+------------------------------
+
+v1.0.6
+
+Added Events archive. You can either enable link at the bottom of Event list via Theme Options / Events / Show Link To Archive option, or you can just paste "?archive=true" parameter to your Event list URL. For example: http://mydomain.com/events?archive=true
+
+Value field in Definition List shortcode, VC element and LSVR Definition List widget can now be hyperlinked
+
+Updated LSVR Toolkit (TownPress) plugin to 1.0.3
+
+Updated Visual Composer to 4.6
+
+Various small fixes
+
+Changed files: style.css, style.scss, archive-lsvrdocument.php, archive-lsvrevent.php, components/breadcrumbs.php, includes/redux/options-config.php, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip includes/plugins/lsvr-toolkit-townpress.zip
+
+------------------------------
+
+v1.0.5
+
+Added optional vertical main menu, which can be enabled either globally under Theme Options / Header Settings or separately for each page via its Page Settings
+
+Sidebar menu can be completely disabled, either globally or separately for each page via its Page Settings. This will also allow you to disable both sidebars and stretch content to full page width
+
+Various small fixes
+
+Changed files: style.css, style.scss, header.php, rtl.css, library/css/skin, components/page-content-after.php, components/page-content-before.php, includes/redux/options-config.php, includes/redux/meta-config.php
+
+------------------------------
+
+v1.0.4
+
+Added optional expiration date for documents. Expired documents will be shown in documents archive
+
+Documents can now be hosted on external URL
+
+You can now display uploader name, upload date and expiration date on Document list
+
+Added option to redirect user to home page after logging in (under Theme Options / Misc)
+
+Updated LSVR Toolkit (TownPress) plugin to 1.0.2
+
+Various small fixes
+
+Changed files: style.css, style.scss, archive-lsvrdocument.php, functions.php, single-lsvrdocument.php, components/breadcrumbs.php, includes/redux/meta-config.php, includes/redux/options-config.php, includes/tgm-plugin-settings.php, library/css/skin
+
+------------------------------
+
+v1.0.3
+
+Header login options were moved to Theme Options / Header Settings. You will have to re-enable it again if you want to use it
+
+Updated TGM Activation Class to 2.5.0
+
+Updated Visual Composer to 4.5.3
+
+Added some Schema.org microdata to Event detail page
+
+Various small fixes
+
+Changed files: style.css, style.scss, bbpress.php, functions.php, header.php, single-lsvrevent.php, wpml-config.xml, ajax/local-weather.php, library/css/skin, components/page-header.php, includes/lsvr-functions.php, includes/tgm-plugin-settings.php, includes/thm-plugin-activation.class.php, includes/plugins/js_composer.zip, includes/redux/options-config.php
+
+New files: library/js/library.min.js, library/js/scripts.min.js
+
+------------------------------
+
+v1.0.2
+
+Updated LSVR Toolkit (TownPress) to 1.0.1
+
+Changed files: style.css, style.scss, includes/plugins/lsvr-toolkit-townpress.php, includes/tgm-plugin-settings.php
+
+------------------------------
+
+v1.0.1
+
+Added bbPress support
+
+Updated Visual composer to 4.5.2
+
+Fixed various small issues
+
+Changed files: style.css, style.scss, footer.php, functions.php, header.php, searchform.php, components/breadcrumbs.php, components/page-header.php, components/sidebar-bottom.php, components/visual-composer-settings.php, includes/lsvr-functions.php, includes/tgm-plugin-settings.php, includes/plugins/js_composer.zip, includes/redux/options-config.php, includes/redux/meta-config.php, library/css/skin, library/js/scripts.js, wpml-config.xml
+
+New files: bbpress.php, components/visualcomposer/layouts/bbpress-lost-password.php, components/visualcomposer/layouts/bbpress-login-register.php
+
+------------------------------
+
+v1.0.0
+
+Initial themeForest release
