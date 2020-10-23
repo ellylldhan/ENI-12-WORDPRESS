@@ -1,0 +1,2 @@
+1 créer une table wordpress et uploader le sql
+2 créer un repertoire "wordpress" sous votre répertoire "www"
